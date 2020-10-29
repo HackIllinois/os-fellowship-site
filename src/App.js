@@ -1,7 +1,8 @@
 import React from 'react';
 
 function App() {
-  window.location.assign('https://hackthis.hackillinois.org');
+  const { pathname, search, hash } = window.location;
+  window.location.assign(`https://hackthis.hackillinois.org${pathname}${search}${hash}`);
   return (
     <div className="App">
     </div>

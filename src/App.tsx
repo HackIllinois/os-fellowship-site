@@ -1,9 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App(): JSX.Element {
-  window.location.assign('https://hackthis.hackillinois.org');
   return (
-    <div className="App" />
+    <Router>
+      <Switch>
+        {/* TODO: Add routes */}
+      </Switch>
+    </Router>
   );
 }
 

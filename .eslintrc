@@ -1,0 +1,10 @@
+{
+  "extends": ["react-app", "react-app/jest", "plugin:@typescript-eslint/recommended", "airbnb-typescript"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "object-curly-newline": "off",
+    "react/require-default-props": "off"
+  }
+}

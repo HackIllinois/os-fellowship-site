@@ -1,10 +1,9 @@
 import React from 'react';
 
-function App() {
+function App(): JSX.Element {
   window.location.assign('https://hackthis.hackillinois.org');
   return (
-    <div className="App">
-    </div>
+    <div className="App" />
   );
 }
 

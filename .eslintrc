@@ -5,6 +5,7 @@
   },
   "rules": {
     "object-curly-newline": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "linebreak-style": "off"
   }
 }

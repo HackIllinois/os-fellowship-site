@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App(): JSX.Element {
   return (
     <Router>
-      <div>temporary placeholder</div>
       <Switch>
-        {/* TODO: Add routes */}
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );

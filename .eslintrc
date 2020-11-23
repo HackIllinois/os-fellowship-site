@@ -6,6 +6,7 @@
   "rules": {
     "object-curly-newline": "off",
     "react/require-default-props": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "max-len": "off"
   }
 }

@@ -1,35 +1,42 @@
 import React from 'react';
 
-import STARS from 'assets/home/hero/stars.svg';
+import TOP_STARS from 'assets/home/hero/top_stars.svg';
+import CENTER_STARS from 'assets/home/hero/center_stars.svg';
 import BOTTOM_LANDSCAPE from 'assets/home/hero/bottom_landscape.svg';
-import MOUNTAINS from 'assets/home/hero/mountains.svg';
 import LEFT_TREES from 'assets/home/hero/left_trees.svg';
 import RIGHT_TREES from 'assets/home/hero/right_trees.svg';
-import WIND from 'assets/home/hero/wind.svg';
-import CAMPERS from 'assets/home/hero/campers.svg';
+import MOON from 'assets/home/hero/moon.svg';
+import WAVE1 from 'assets/home/hero/wave1.svg';
+import WAVE2 from 'assets/home/hero/wave2.svg';
 import LOGO from 'assets/home/hero/logo.svg';
-import MOON_REFLECTION from 'assets/home/hero/moon_reflection.svg';
-import MOBILE_TREES from 'assets/home/hero/mobile_trees.svg';
-import LOGO_MOBILE from 'assets/home/hero/logo_mobile.svg';
 
 import styles from './styles.module.scss';
 
 const Section1: React.FC = () => (
   <div className={styles.hero}>
-    <div className={styles.stars} style={{ backgroundImage: `url(${STARS})` }} />
-    <div className={styles.moon} />
-    <div className={styles.bottomLandscape} style={{ backgroundImage: `url(${BOTTOM_LANDSCAPE})` }} />
-    <div className={styles.mountains} style={{ backgroundImage: `url(${MOUNTAINS})` }} />
-    <div className={styles.water} />
-    <div className={styles.leftTrees} style={{ backgroundImage: `url(${LEFT_TREES})` }} />
-    <div className={styles.rightTrees} style={{ backgroundImage: `url(${RIGHT_TREES})` }} />
-    <div className={styles.wind} style={{ backgroundImage: `url(${WIND})` }} />
-    <div className={styles.campers} style={{ backgroundImage: `url(${CAMPERS})` }} />
-    <div className={styles.logo} style={{ backgroundImage: `url(${LOGO})` }} />
-    <div className={styles.landingText}>REKINDLING CONNECTIONS</div>
-    <div className={styles.moonReflection} style={{ backgroundImage: `url(${MOON_REFLECTION})` }} />
-    <div className={styles.mobileTrees} style={{ backgroundImage: `url(${MOBILE_TREES})` }} />
-    <div className={styles.logoMobile} style={{ backgroundImage: `url(${LOGO_MOBILE})` }} />
+    <img className={styles.wave1} src={WAVE1} alt="" />
+    <img className={styles.wave2} src={WAVE2} alt="" />
+    <div className={styles.topStars} style={{ backgroundImage: `url(${TOP_STARS})` }} />
+    <img className={styles.centerStars} src={CENTER_STARS} alt="" />
+    <img className={styles.moon} src={MOON} alt="" />
+    <img className={styles.leftTrees} src={LEFT_TREES} alt="" />
+    <img className={styles.rightTrees} src={RIGHT_TREES} alt="" />
+    <img className={styles.bottomLandscape} src={BOTTOM_LANDSCAPE} alt="" />
+    <img className={styles.logo} src={LOGO} alt="" />
+
+    <div className={styles.header}>
+      <h1>Open Source</h1>
+      <h1>Hackathon</h1>
+      <h3>February 15 - March 5, 2021</h3>
+      <a className={styles.applyButton} href="/">Apply Now</a>
+    </div>
+
+    <p className={styles.description}>
+      Keeping in mind the virtual semester college students across the country are facing and
+      the pivotal role we can play—now more than ever before—in bringing together a community of
+      passionate developers and ideators, HackIllinois is announcing a brand new initiative in
+      the form of Open Source Month, held from February 15th-March 5th, 2021.
+    </p>
   </div>
 );
 

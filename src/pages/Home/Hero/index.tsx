@@ -9,6 +9,7 @@ import MOON from 'assets/home/hero/moon.svg';
 import WAVE1 from 'assets/home/hero/wave1.svg';
 import WAVE2 from 'assets/home/hero/wave2.svg';
 import LOGO from 'assets/home/hero/logo.svg';
+import LOGO_MOBILE from 'assets/home/hero/logo_mobile.svg';
 
 import styles from './styles.module.scss';
 
@@ -23,6 +24,7 @@ const Section1: React.FC = () => (
     <img className={styles.rightTrees} src={RIGHT_TREES} alt="" />
     <img className={styles.bottomLandscape} src={BOTTOM_LANDSCAPE} alt="" />
     <img className={styles.logo} src={LOGO} alt="" />
+    <img className={styles.logoMobile} src={LOGO_MOBILE} alt="" />
 
     <div className={styles.header}>
       <h1>Open Source</h1>

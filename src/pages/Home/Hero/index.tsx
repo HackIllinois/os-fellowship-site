@@ -30,10 +30,11 @@ const Section1: React.FC = () => (
     <img className={styles.logoMobile} src={LOGO_MOBILE} alt="" />
 
     <div className={styles.header}>
+      <h4>HackIllinois presents</h4>
       <h1>Open Source</h1>
-      <h1>Hackathon</h1>
+      <h1>Fellowship</h1>
       <h3>February 15 - March 5, 2021</h3>
-      <a className={styles.applyButton} href="/">Apply Now</a>
+      <a className={styles.applyButton} href="/">Coming Soon...</a>
     </div>
 
     <p className={styles.description}>

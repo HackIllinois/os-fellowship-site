@@ -123,7 +123,7 @@
     }
 
     @media screen and (max-width: 900px) {
-      left: -160px;
+      left: -100px;
     }
 
     @media screen and (max-width: 767px) {
@@ -235,6 +235,15 @@
       font-weight: 600;
     }
 
+    h4 {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 1.15em;
+      margin-left: 4px;
+      margin-bottom: 5px;
+    }
+
     .applyButton {
       display: inline-block;
       text-decoration: none;
@@ -271,7 +280,7 @@
     }
 
     @media screen and (min-height: 900px) and (max-width: 1000px) {
-      bottom: 9%
+      bottom: 9%;
     }
 
     @media screen and (min-height: 900px) and (min-width: 1000px) {

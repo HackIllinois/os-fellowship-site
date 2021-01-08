@@ -1,10 +1,12 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import TOP_STARS from 'assets/home/hero/top_stars.svg';
 import CENTER_STARS from 'assets/home/hero/center_stars.svg';
 import BOTTOM_LANDSCAPE from 'assets/home/hero/bottom_landscape.svg';
 import LEFT_TREES from 'assets/home/hero/left_trees.svg';
 import RIGHT_TREES from 'assets/home/hero/right_trees.svg';
+import RIGHT_TREES_FULL from 'assets/home/hero/right_trees_full.svg';
 import MOON from 'assets/home/hero/moon.svg';
 import WAVE1 from 'assets/home/hero/wave1.svg';
 import WAVE2 from 'assets/home/hero/wave2.svg';
@@ -22,6 +24,7 @@ const Section1: React.FC = () => (
     <img className={styles.moon} src={MOON} alt="" />
     <img className={styles.leftTrees} src={LEFT_TREES} alt="" />
     <img className={styles.rightTrees} src={RIGHT_TREES} alt="" />
+    <img className={clsx(styles.rightTrees, styles.full)} src={RIGHT_TREES_FULL} alt="" />
     <img className={styles.bottomLandscape} src={BOTTOM_LANDSCAPE} alt="" />
     <img className={styles.logo} src={LOGO} alt="" />
     <img className={styles.logoMobile} src={LOGO_MOBILE} alt="" />

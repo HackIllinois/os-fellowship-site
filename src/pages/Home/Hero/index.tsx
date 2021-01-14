@@ -41,7 +41,7 @@ const Section1: React.FC = () => (
       Keeping in mind the virtual semester college students across the country are facing and
       the pivotal role we can play—now more than ever before—in bringing together a community of
       passionate developers and ideators, HackIllinois is announcing a brand new initiative in
-      the form of Open Source Month, held from February 15th-March 5th, 2021.
+      the form of Open Source Fellowship, held from February 15th-March 5th, 2021.
     </p>
   </div>
 );

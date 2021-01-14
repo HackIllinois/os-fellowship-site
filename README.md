@@ -1,1 +1,1 @@
-# The Official Website of HackIllinois
+# HackIllinois Open Source Fellowship Website

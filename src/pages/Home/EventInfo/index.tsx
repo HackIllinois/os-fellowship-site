@@ -31,7 +31,7 @@ const EventInfo: React.FC = () => (
       </p>
 
       <h1>The Program</h1>
-      <p>
+      <p className={styles.bold}>
         Throughout the program, students will work in project groups mentored by professionals in
         Open Source to get familiar with and contribute to a large-scale open source project.&nbsp;
         <u>

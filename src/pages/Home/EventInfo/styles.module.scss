@@ -1,0 +1,36 @@
+.eventInfo {
+  position: relative;
+  margin-top: -26px;
+  padding-top: 1px;
+  min-height: 55vw;
+
+  .landscapeContinued {
+    position: absolute;
+    top: 0;
+
+    width: 90%;
+    max-width: 1600px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    
+    padding-bottom: 1px;
+    margin-top: 10vw;
+    margin-left: 40%;
+    margin-right: 10%;
+    
+    h1 {
+      color: #46959F;
+      font-weight: 600;
+      font-size: 2em;
+    }
+    
+    p {
+      color: white;
+      font-size: 1em;
+      line-height: 1.8em;
+    }
+  }
+}

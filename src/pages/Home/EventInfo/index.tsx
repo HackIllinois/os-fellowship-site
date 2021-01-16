@@ -1,11 +1,25 @@
 import React from 'react';
+import clsx from 'clsx';
 
-import LANDSCAPE_CONT from 'assets/home/event_info/landscape_continued.svg';
+import CAMPFIRE from 'assets/home/event_info/campfire.svg';
+import CAMPFIRE_TABLET from 'assets/home/event_info/campfire_tablet.svg';
+import CAMPFIRE_MOBILE from 'assets/home/event_info/campfire_mobile.svg';
 import styles from './styles.module.scss';
 
 const EventInfo: React.FC = () => (
   <div className={styles.eventInfo}>
-    <img className={styles.landscapeContinued} src={LANDSCAPE_CONT} alt="" />
+    <img className={clsx(styles.campfire, styles.desktop)} src={CAMPFIRE} alt="" />
+    <img className={clsx(styles.campfire, styles.tablet)} src={CAMPFIRE_TABLET} alt="" />
+    <img className={clsx(styles.campfire, styles.mobile)} src={CAMPFIRE_MOBILE} alt="" />
+
+    <div className={styles.descriptionContainer}>
+      <p className={styles.description}>
+        Keeping in mind the virtual semester college students across the country are facing and
+        the pivotal role we can play—now more than ever before—in bringing together a community of
+        passionate developers and ideators, HackIllinois is announcing a brand new initiative in
+        the form of Open Source Fellowship, held from February 15th-March 5th, 2021.
+      </p>
+    </div>
 
     <div className={styles.content}>
       <h1>Our Vision</h1>

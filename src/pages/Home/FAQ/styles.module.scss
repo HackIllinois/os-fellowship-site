@@ -3,6 +3,11 @@
   padding: 1px 0;
   margin-top: 100px;
   overflow: hidden;
+  font-size: .98em;
+
+  @media screen and (max-width: 1800px) {
+    font-size: .9em;
+  }
 
   @media screen and (max-width: 767px) {
     margin-top: 0;
@@ -75,7 +80,7 @@
     }
 
     @media screen and (max-width: 767px) {
-      font-size: .85em;
+      font-size: .9em;
       width: auto;
 
       margin-right: 10%;

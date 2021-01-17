@@ -2,11 +2,23 @@
   position: relative;
   padding: 1px 0;
   margin-top: 100px;
+  overflow: hidden;
 
   .blob {
     position: absolute;
     height: 100%;
     width: 70%;
+
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      left: -25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+      left: 50%;
+      transform: translateX(-42%);
+    }
   }
 
   .content {
@@ -18,10 +30,29 @@
     padding-bottom: 1px;
     width: 50%;
 
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 110px;
+      width: 60%;
+      font-size: .95em;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+      margin-right: 10%;
+      margin-bottom: 75px;
+      font-size: .85em;
+    }
+
     h1 {
       font-weight: 600;
       font-size: 2.15em;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        font-size: 1.6em;
+        margin-bottom: 30px;
+      }
     }
 
     h4 {
@@ -29,10 +60,15 @@
       font-size: 1.15em;
       font-weight: 600;
       margin-bottom: 0;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1em;
+      }
     }
 
     p {
       margin-top: 3px;
+      color: #303030;
     }
   }
 }

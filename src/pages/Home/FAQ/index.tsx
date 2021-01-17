@@ -1,11 +1,14 @@
 import React from 'react';
 
 import BLOB from 'assets/home/faq/blob.svg';
+import CUP from 'assets/home/faq/cup.gif';
 import styles from './styles.module.scss';
 
 const FAQ = (): JSX.Element => (
   <div className={styles.faq}>
     <img className={styles.blob} src={BLOB} alt="" />
+
+    <img className={styles.cup} src={CUP} alt="" />
 
     <div className={styles.content}>
       <h1>FAQ</h1>

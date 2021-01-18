@@ -9,6 +9,8 @@
     "linebreak-style": "off",
     "max-len": "off",
     "no-plusplus": "off",
-    "no-bitwise": "off"
+    "no-bitwise": "off",
+    "no-param-reassign": "off",
+    "no-return-assign": "off"
   }
 }

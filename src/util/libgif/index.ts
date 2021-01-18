@@ -1,4 +1,11 @@
 // Modified from https://github.com/buzzfeed/libgif-js
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable no-param-reassign */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable @typescript-eslint/no-use-before-define */
 
 /*
   SuperGif
@@ -18,41 +25,41 @@
 
   Image tag attributes:
 
-    rel:animated_src -	If this url is specified, it's loaded into the player instead of src.
+    rel:animated_src -  If this url is specified, it's loaded into the player instead of src.
               This allows a preview frame to be shown until animated gif data is streamed into the canvas
 
-    rel:auto_play -		Defaults to 1 if not specified. If set to zero, a call to the play() method is needed
+    rel:auto_play -    Defaults to 1 if not specified. If set to zero, a call to the play() method is needed
 
   Constructor options args
 
-    gif 				Required. The DOM element of an img tag.
-    loop_mode			Optional. Setting this to false will force disable looping of the gif.
-    auto_play 			Optional. Same as the rel:auto_play attribute above, this arg overrides the img tag info.
-    max_width			Optional. Scale images over max_width down to max_width. Helpful with mobile.
-      on_end				Optional. Add a callback for when the gif reaches the end of a single loop (one iteration). The first argument passed will be the gif HTMLElement.
-    loop_delay			Optional. The amount of time to pause (in ms) after each single loop (iteration).
-    draw_while_loading	Optional. Determines whether the gif will be drawn to the canvas whilst it is loaded.
-    show_progress_bar	Optional. Only applies when draw_while_loading is set to true.
+    gif         Required. The DOM element of an img tag.
+    loop_mode      Optional. Setting this to false will force disable looping of the gif.
+    auto_play       Optional. Same as the rel:auto_play attribute above, this arg overrides the img tag info.
+    max_width      Optional. Scale images over max_width down to max_width. Helpful with mobile.
+      on_end        Optional. Add a callback for when the gif reaches the end of a single loop (one iteration). The first argument passed will be the gif HTMLElement.
+    loop_delay      Optional. The amount of time to pause (in ms) after each single loop (iteration).
+    draw_while_loading  Optional. Determines whether the gif will be drawn to the canvas whilst it is loaded.
+    show_progress_bar  Optional. Only applies when draw_while_loading is set to true.
 
   Instance methods
 
     // loading
-    load( callback )		Loads the gif specified by the src or rel:animated_src sttributie of the img tag into a canvas element and then calls callback if one is passed
-    load_url( src, callback )	Loads the gif file specified in the src argument into a canvas element and then calls callback if one is passed
+    load( callback )    Loads the gif specified by the src or rel:animated_src sttributie of the img tag into a canvas element and then calls callback if one is passed
+    load_url( src, callback )  Loads the gif file specified in the src argument into a canvas element and then calls callback if one is passed
 
     // play controls
-    play -				Start playing the gif
-    pause -				Stop playing the gif
-    move_to(i) -		Move to frame i of the gif
-    move_relative(i) -	Move i frames ahead (or behind if i < 0)
+    play -        Start playing the gif
+    pause -        Stop playing the gif
+    move_to(i) -    Move to frame i of the gif
+    move_relative(i) -  Move i frames ahead (or behind if i < 0)
 
     // getters
-    get_canvas			The canvas element that the gif is playing in. Handy for assigning event handlers to.
-    get_playing			Whether or not the gif is currently playing
-    get_loading			Whether or not the gif has finished loading/parsing
-    get_auto_play		Whether or not the gif is set to play automatically
-    get_length			The number of frames in the gif
-    get_current_frame	The index of the currently displayed frame of the gif
+    get_canvas      The canvas element that the gif is playing in. Handy for assigning event handlers to.
+    get_playing      Whether or not the gif is currently playing
+    get_loading      Whether or not the gif has finished loading/parsing
+    get_auto_play    Whether or not the gif is set to play automatically
+    get_length      The number of frames in the gif
+    get_current_frame  The index of the currently displayed frame of the gif
 
     For additional customization (viewport inside iframe) these params may be passed:
     c_w, c_h - width and height of canvas
@@ -78,7 +85,7 @@ type Header = {
 } & (
   { gctFlag: true, gct: number[][] }
   | { gctFlag: false, gct: undefined }
-)
+);
 
 type GCE = {
   reserved: boolean[],
@@ -98,7 +105,7 @@ type COM = {
 type PTE = {
   ptHeader: number[],
   ptData: string,
-}
+};
 
 type NetscapeApp = {
   identifier: 'NETSCAPE',
@@ -106,7 +113,7 @@ type NetscapeApp = {
   unknown: number,
   iterations: number,
   terminator: number,
-}
+};
 
 type UnknownApp = {
   identifier: string,
@@ -118,9 +125,9 @@ type App = NetscapeApp | UnknownApp;
 
 type Unknown = {
   data: string,
-}
+};
 
-type ZeroToTwoFiftyFive =  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 | 120 | 121 | 122 | 123 | 124 | 125 | 126 | 127 | 128 | 129 | 130 | 131 | 132 | 133 | 134 | 135 | 136 | 137 | 138 | 139 | 140 | 141 | 142 | 143 | 144 | 145 | 146 | 147 | 148 | 149 | 150 | 151 | 152 | 153 | 154 | 155 | 156 | 157 | 158 | 159 | 160 | 161 | 162 | 163 | 164 | 165 | 166 | 167 | 168 | 169 | 170 | 171 | 172 | 173 | 174 | 175 | 176 | 177 | 178 | 179 | 180 | 181 | 182 | 183 | 184 | 185 | 186 | 187 | 188 | 189 | 190 | 191 | 192 | 193 | 194 | 195 | 196 | 197 | 198 | 199 | 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207 | 208 | 209 | 210 | 211 | 212 | 213 | 214 | 215 | 216 | 217 | 218 | 219 | 220 | 221 | 222 | 223 | 224 | 225 | 226 | 227 | 228 | 229 | 230 | 231 | 232 | 233 | 234 | 235 | 236 | 237 | 238 | 239 | 240 | 241 | 242 | 243 | 244 | 245 | 246 | 247 | 248 | 249 | 250 | 251 | 252 | 253 | 254 | 255;
+type ZeroToTwoFiftyFive = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 | 120 | 121 | 122 | 123 | 124 | 125 | 126 | 127 | 128 | 129 | 130 | 131 | 132 | 133 | 134 | 135 | 136 | 137 | 138 | 139 | 140 | 141 | 142 | 143 | 144 | 145 | 146 | 147 | 148 | 149 | 150 | 151 | 152 | 153 | 154 | 155 | 156 | 157 | 158 | 159 | 160 | 161 | 162 | 163 | 164 | 165 | 166 | 167 | 168 | 169 | 170 | 171 | 172 | 173 | 174 | 175 | 176 | 177 | 178 | 179 | 180 | 181 | 182 | 183 | 184 | 185 | 186 | 187 | 188 | 189 | 190 | 191 | 192 | 193 | 194 | 195 | 196 | 197 | 198 | 199 | 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207 | 208 | 209 | 210 | 211 | 212 | 213 | 214 | 215 | 216 | 217 | 218 | 219 | 220 | 221 | 222 | 223 | 224 | 225 | 226 | 227 | 228 | 229 | 230 | 231 | 232 | 233 | 234 | 235 | 236 | 237 | 238 | 239 | 240 | 241 | 242 | 243 | 244 | 245 | 246 | 247 | 248 | 249 | 250 | 251 | 252 | 253 | 254 | 255;
 
 type KnownExtBlockLabels = 0xf9 | 0xfe | 0x01 | 0xff;
 type ExtBlock =
@@ -144,7 +151,7 @@ type ImageBlock = {
 } & (
   { lctFlag: true, lct: number[][] }
   | { lctFlag: false }
-)
+);
 
 type ValidSentinels = 33 | 44 | 59; // ascii codes for '!' | ',' | ';'
 type Block =
@@ -164,7 +171,7 @@ type Handler = {
   unknown: (block: Unknown) => void,
   img: (block: ImageBlock) => void,
   eof: (block: unknown) => void,
-}
+};
 
 type Options = {
   gif: HTMLImageElement,
@@ -193,18 +200,17 @@ type Options = {
 
 type UserOptions = Partial<Omit<Options, 'is_vp' | 'gif'>> & {
   gif: HTMLImageElement,
-}
+};
 
 type FrameOffset = {
   x: number,
   y: number,
-}
+};
 
 type Frame = {
   data: ImageData,
   delay: number,
-}
-
+};
 
 // Generic functions
 const bitsToNum = (ba: boolean[]) => ba.reduce((s, n) => s * 2 + Number(n), 0);
@@ -231,13 +237,14 @@ type StreamType = {
   readBytes: (n: number) => number[],
   read: (n: number) => string,
   readUnsigned: () => number,
-}
-const Stream = function(this: StreamType, data: string | Uint8Array) {
+};
+
+function Stream(this: StreamType, data: string | Uint8Array) {
   this.data = data;
   this.len = this.data.length;
   this.pos = 0;
 
-  this.readByte = function() {
+  this.readByte = () => {
     if (this.pos >= this.data.length) {
       throw new Error('Attempted to read past end of stream.');
     }
@@ -245,7 +252,7 @@ const Stream = function(this: StreamType, data: string | Uint8Array) {
     return data.charCodeAt(this.pos++) & 0xff;
   };
 
-  this.readBytes = function(n) {
+  this.readBytes = (n) => {
     const bytes = [];
     for (let i = 0; i < n; i++) {
       bytes.push(this.readByte());
@@ -253,7 +260,7 @@ const Stream = function(this: StreamType, data: string | Uint8Array) {
     return bytes;
   };
 
-  this.read = function(n) {
+  this.read = (n) => {
     let s = '';
     for (let i = 0; i < n; i++) {
       s += String.fromCharCode(this.readByte());
@@ -261,12 +268,12 @@ const Stream = function(this: StreamType, data: string | Uint8Array) {
     return s;
   };
 
-  this.readUnsigned = function() {
+  this.readUnsigned = () => {
     // Little-endian.
     const a = this.readBytes(2);
     return (a[1] << 8) + a[0];
   };
-};
+}
 
 const lzwDecode = (minCodeSize: number, data: string) => {
   // TODO: Now that the GIF parser is a bit different, maybe this should get an array of bytes instead of a String?
@@ -310,23 +317,23 @@ const lzwDecode = (minCodeSize: number, data: string) => {
 
     if (code === clearCode) {
       clear();
-      continue;
-    }
-    if (code === eoiCode) break;
-
-    if (code < dict.length) {
-      if (last !== clearCode) {
-        dict.push(dict[last].concat(dict[code][0]));
-      }
     } else {
-      if (code !== dict.length) throw new Error('Invalid LZW code.');
-      dict.push(dict[last].concat(dict[last][0]));
-    }
-    output.push(...dict[code]);
+      if (code === eoiCode) break;
 
-    if (dict.length === 1 << codeSize && codeSize < 12) {
-      // If we're at the last code and codeSize is 12, the next code will be a clearCode, and it'll be 12 bits long.
-      codeSize++;
+      if (code < dict.length) {
+        if (last !== clearCode) {
+          dict.push(dict[last].concat(dict[code][0]));
+        }
+      } else {
+        if (code !== dict.length) throw new Error('Invalid LZW code.');
+        dict.push(dict[last].concat(dict[last][0]));
+      }
+      output.push(...dict[code]);
+
+      if (dict.length === 1 << codeSize && codeSize < 12) {
+        // If we're at the last code and codeSize is 12, the next code will be a clearCode, and it'll be 12 bits long.
+        codeSize++;
+      }
     }
   }
 
@@ -336,9 +343,7 @@ const lzwDecode = (minCodeSize: number, data: string) => {
 };
 
 // The actual parsing; returns an object with properties.
-const parseGIF = (st: StreamType, handler: Handler) => {
-  handler || (handler = {} as Handler);
-
+const parseGIF = (st: StreamType, handler: Handler = {} as Handler) => {
   // LZW (GIF-specific)
   const parseCT = (entries: number) => {
     // Each entry is 3 bytes, for RGB.
@@ -598,16 +603,18 @@ const SuperGif = (opts: UserOptions) => {
   const frameOffsets: FrameOffset[] = []; // elements have .x and .y properties
 
   const { gif } = options;
-  if (typeof options.auto_play === 'undefined') options.auto_play = !gif.getAttribute('rel:auto_play') || gif.getAttribute('rel:auto_play') == '1';
+  if (typeof options.auto_play === 'undefined') options.auto_play = !gif.getAttribute('rel:auto_play') || gif.getAttribute('rel:auto_play') === '1';
 
-  const onEndListener = options['on_end'] ? options.on_end : null;
-  const loopDelay = options.hasOwnProperty('loop_delay') ? options.loop_delay : 0;
-  const overrideLoopMode = options.hasOwnProperty('loop_mode') ? options.loop_mode : 'auto';
-  let drawWhileLoading = options.hasOwnProperty('draw_while_loading') ? options.draw_while_loading : true;
-  const showProgressBar = drawWhileLoading ? (options.hasOwnProperty('show_progress_bar') ? options.show_progress_bar : true) : false;
-  const progressBarHeight = options['progressbar_height'] ? options.progressbar_height : 25;
-  const progressBarBackgroundColor = options['progressbar_background_color'] ? options.progressbar_background_color : 'rgba(255,255,255,0.4)';
-  const progressBarForegroundColor = options['progressbar_foreground_color'] ? options.progressbar_foreground_color : 'rgba(255,0,22,.8)';
+  const onEndListener = options.on_end ? options.on_end : null;
+  const loopDelay = options.loop_delay ? options.loop_delay : 0;
+  const overrideLoopMode = options.loop_mode !== undefined ? options.loop_mode : 'auto';
+  let drawWhileLoading = options.draw_while_loading !== undefined ? options.draw_while_loading : true;
+  const showProgressBar = drawWhileLoading
+    ? (options.show_progress_bar !== undefined ? options.show_progress_bar : true)
+    : false;
+  const progressBarHeight = options.progressbar_height ? options.progressbar_height : 25;
+  const progressBarBackgroundColor = options.progressbar_background_color ? options.progressbar_background_color : 'rgba(255,255,255,0.4)';
+  const progressBarForegroundColor = options.progressbar_foreground_color ? options.progressbar_foreground_color : 'rgba(255,0,22,.8)';
 
   const clear = () => {
     transparency = null;
@@ -617,14 +624,21 @@ const SuperGif = (opts: UserOptions) => {
     frame = null;
   };
 
-  // XXX: There's probably a better way to handle catching exceptions when
-  // callbacks are involved.
-  const doParse = () => {
-    try {
-      parseGIF(stream, handler);
-    } catch (err) {
-      doLoadError('parse');
+  let canvas: HTMLCanvasElement;
+  let ctx: CanvasRenderingContext2D;
+  let toolbar: HTMLDivElement;
+  let tmpCanvas: HTMLCanvasElement;
+  let initialized = false;
+  let load_callback: ((gif: HTMLImageElement) => void) | false = false;
+
+  const get_canvas_scale = () => {
+    let scale;
+    if (options.max_width && hdr && hdr.width > options.max_width) {
+      scale = options.max_width / hdr.width;
+    } else {
+      scale = 1;
     }
+    return scale;
   };
 
   const doText = (text: string) => {
@@ -667,15 +681,15 @@ const SuperGif = (opts: UserOptions) => {
       if (options.is_vp) {
         if (!ctx_scaled) {
           top = options.vp_t + options.vp_h - height;
-          height = height;
+          // height = height;
           left = options.vp_l;
-          mid = left + pos / length * options.vp_w;
+          mid = left + (pos / length) * options.vp_w;
           width = canvas.width;
         } else {
           top = (options.vp_t + options.vp_h - height) / get_canvas_scale();
           height /= get_canvas_scale();
           left = options.vp_l / get_canvas_scale();
-          mid = left + pos / length * (options.vp_w / get_canvas_scale());
+          mid = left + (pos / length) * (options.vp_w / get_canvas_scale());
           width = canvas.width / get_canvas_scale();
         }
         // some debugging, draw rect around viewport
@@ -696,7 +710,7 @@ const SuperGif = (opts: UserOptions) => {
         // }
       } else {
         top = (canvas.height - height) / (ctx_scaled ? get_canvas_scale() : 1);
-        mid = pos / length * canvas.width / (ctx_scaled ? get_canvas_scale() : 1);
+        mid = ((pos / length) * canvas.width) / (ctx_scaled ? get_canvas_scale() : 1);
         width = canvas.width / (ctx_scaled ? get_canvas_scale() : 1);
         height /= ctx_scaled ? get_canvas_scale() : 1;
       }
@@ -709,7 +723,7 @@ const SuperGif = (opts: UserOptions) => {
     }
   };
 
-  let doLoadError = (originOfError: string) => {
+  const doLoadError = (originOfError: string) => {
     const drawError = () => {
       ctx.fillStyle = 'black';
       ctx.fillRect(0, 0, options.c_w ? options.c_w : hdr.width, options.c_h ? options.c_h : hdr.height);
@@ -725,7 +739,7 @@ const SuperGif = (opts: UserOptions) => {
     loadError = originOfError;
     hdr = {
       width: gif.width,
-      height: gif.height
+      height: gif.height,
     } as Header; // Fake header.
     frames = [];
     drawError();
@@ -736,6 +750,15 @@ const SuperGif = (opts: UserOptions) => {
     setSizes(hdr.width, hdr.height);
   };
 
+  const pushFrame = () => {
+    if (!frame) return;
+    frames.push({
+      data: frame.getImageData(0, 0, hdr.width, hdr.height),
+      delay: delay as number,
+    });
+    frameOffsets.push({ x: 0, y: 0 });
+  };
+
   const doGCE = (gce: GCE) => {
     pushFrame();
     clear();
@@ -743,15 +766,6 @@ const SuperGif = (opts: UserOptions) => {
     delay = gce.delayTime;
     disposalMethod = gce.disposalMethod;
     // We don't have much to do with the rest of GCE.
-  };
-
-  let pushFrame = () => {
-    if (!frame) return;
-    frames.push({
-      data: frame.getImageData(0, 0, hdr.width, hdr.height),
-      delay: delay as number
-    });
-    frameOffsets.push({ x: 0, y: 0 });
   };
 
   const doImg = (img: ImageBlock) => {
@@ -810,9 +824,10 @@ const SuperGif = (opts: UserOptions) => {
     img.pixels.forEach((pixel, i) => {
       // imgData.data === [R,G,B,A,R,G,B,A,...]
       if (pixel !== transparency) {
-        imgData.data[i * 4 + 0] = ct[pixel][0];
-        imgData.data[i * 4 + 1] = ct[pixel][1];
-        imgData.data[i * 4 + 2] = ct[pixel][2];
+        const [r, g, b] = ct[pixel];
+        imgData.data[i * 4 + 0] = r;
+        imgData.data[i * 4 + 1] = g;
+        imgData.data[i * 4 + 2] = b;
         imgData.data[i * 4 + 3] = 255; // Opaque.
       }
     });
@@ -828,7 +843,7 @@ const SuperGif = (opts: UserOptions) => {
     // bar for each image chunk (not just the final image).
     if (drawWhileLoading) {
       ctx.drawImage(tmpCanvas, 0, 0);
-      drawWhileLoading = options.auto_play;
+      drawWhileLoading = options.auto_play as boolean;
     }
 
     lastImg = img;
@@ -848,6 +863,24 @@ const SuperGif = (opts: UserOptions) => {
     const getNextFrameNo = () => {
       const delta = forward ? 1 : -1;
       return (i + delta + frames.length) % frames.length;
+    };
+
+    const putFrame = () => {
+      i = parseInt(String(i), 10);
+
+      if (i > frames.length - 1) {
+        i = 0;
+      }
+
+      if (i < 0) {
+        i = 0;
+      }
+
+      const offset = frameOffsets[i];
+
+      tmpCanvas.getContext('2d')?.putImageData(frames[i].data, offset.x, offset.y);
+      ctx.globalCompositeOperation = 'copy';
+      ctx.drawImage(tmpCanvas, 0, 0);
     };
 
     const stepFrame = (amount: number) => {
@@ -894,25 +927,6 @@ const SuperGif = (opts: UserOptions) => {
       };
     })();
 
-    let putFrame = () => {
-      let offset;
-      i = parseInt(String(i), 10);
-
-      if (i > frames.length - 1) {
-        i = 0;
-      }
-
-      if (i < 0) {
-        i = 0;
-      }
-
-      offset = frameOffsets[i];
-
-      tmpCanvas.getContext('2d')?.putImageData(frames[i].data, offset.x, offset.y);
-      ctx.globalCompositeOperation = 'copy';
-      ctx.drawImage(tmpCanvas, 0, 0);
-    };
-
     const play = () => {
       playing = true;
       step();
@@ -951,7 +965,7 @@ const SuperGif = (opts: UserOptions) => {
       move_to(frame_idx: number) {
         i = frame_idx;
         putFrame();
-      }
+      },
     };
   })();
 
@@ -970,7 +984,7 @@ const SuperGif = (opts: UserOptions) => {
     doDecodeProgress(draw);
   };
 
-  let handler: Handler = {
+  const handler: Handler = {
     hdr: withProgress(doHdr),
     gce: withProgress(doGCE),
     com: withProgress(doNothing),
@@ -978,7 +992,7 @@ const SuperGif = (opts: UserOptions) => {
     // I guess that's all for now.
     app: {
       // TODO: Is there much point in actually supporting iterations?
-      NETSCAPE: withProgress(doNothing)
+      NETSCAPE: withProgress(doNothing),
     },
     unknown: () => {},
     img: withProgress(doImg, true),
@@ -995,6 +1009,16 @@ const SuperGif = (opts: UserOptions) => {
       if (load_callback) {
         load_callback(gif);
       }
+    },
+  };
+
+  // XXX: There's probably a better way to handle catching exceptions when
+  // callbacks are involved.
+  const doParse = () => {
+    try {
+      parseGIF(stream, handler);
+    } catch (err) {
+      doLoadError('parse');
     }
   };
 
@@ -1008,8 +1032,12 @@ const SuperGif = (opts: UserOptions) => {
 
     tmpCanvas = document.createElement('canvas');
 
-    (div as any).width = canvas.width = gif.width;
-    (div as any).height = canvas.height = gif.height;
+    canvas.width = gif.width;
+    (div as any).width = gif.width;
+
+    canvas.height = gif.height;
+    (div as any).height = gif.height;
+
     toolbar.style.minWidth = `${gif.width}px`;
 
     div.className = 'jsgif';
@@ -1023,23 +1051,6 @@ const SuperGif = (opts: UserOptions) => {
     if (options.c_w && options.c_h) setSizes(options.c_w, options.c_h);
     initialized = true;
   };
-
-  let get_canvas_scale = () => {
-    let scale;
-    if (options.max_width && hdr && hdr.width > options.max_width) {
-      scale = options.max_width / hdr.width;
-    } else {
-      scale = 1;
-    }
-    return scale;
-  };
-
-  let canvas: HTMLCanvasElement;
-  let ctx: CanvasRenderingContext2D;
-  let toolbar: HTMLDivElement;
-  let tmpCanvas: HTMLCanvasElement;
-  let initialized = false;
-  let load_callback: ((gif: HTMLImageElement) => void) | false = false;
 
   const load_setup = (callback?: (gif: HTMLImageElement) => void) => {
     if (loading) return false;
@@ -1107,8 +1118,8 @@ const SuperGif = (opts: UserOptions) => {
         // Wait until connection is opened to replace the gif element with a canvas to avoid a blank img
         if (!initialized) init();
       };
-      h.onload = function(e) {
-        if (this.status != 200) {
+      h.onload = function (e) {
+        if (this.status !== 200) {
           doLoadError('xhr - response');
         }
         let data = this.response;
@@ -1136,7 +1147,7 @@ const SuperGif = (opts: UserOptions) => {
       stream = new (Stream as any)(arr);
       setTimeout(doParse, 0);
     },
-    set_frame_offset: setFrameOffset
+    set_frame_offset: setFrameOffset,
   };
 };
 

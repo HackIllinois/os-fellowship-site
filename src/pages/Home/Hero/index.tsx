@@ -33,7 +33,7 @@ const Section1: React.FC = () => (
       <h4>HackIllinois presents</h4>
       <h1>Open Source</h1>
       <h1>Fellowship</h1>
-      <h3>February 15 - March 5, 2021</h3>
+      <h3>February 12 - March 4, 2021</h3>
       <a className={styles.applyButton} href="https://docs.google.com/forms/d/e/1FAIpQLSeCUg51ZyealgmuZygU7atgu8FduzI3WvNeKfiAxuiUHml6wQ/viewform?usp=sf_link">Apply Now</a>
     </div>
 

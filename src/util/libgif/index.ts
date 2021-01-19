@@ -312,14 +312,14 @@ const lzwDecode = (minCodeSize: number, data: string) => {
   let code;
   let last;
 
-  while (true) {
+  while (code !== eoiCode) {
     last = code as number;
     code = readCode(codeSize);
 
     if (code === clearCode) {
       clear();
     } else {
-      if (code === eoiCode) break;
+      // if (code === eoiCode) break;
 
       if (code < dict.length) {
         if (last !== clearCode) {
@@ -565,6 +565,7 @@ const parseGIF = (st: StreamType, handler: Handler = {} as Handler) => {
   parse();
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const SuperGif = (opts: UserOptions) => {
   const options = {
     // viewport position
@@ -1034,10 +1035,10 @@ const SuperGif = (opts: UserOptions) => {
     tmpCanvas = document.createElement('canvas');
 
     canvas.width = gif.width;
-    (div as any).width = gif.width;
+    div.style.width = `${gif.width}px`;
 
     canvas.height = gif.height;
-    (div as any).height = gif.height;
+    div.style.height = `${gif.height}px`;
 
     toolbar.style.minWidth = `${gif.width}px`;
 
@@ -1111,12 +1112,6 @@ const SuperGif = (opts: UserOptions) => {
 
       if ('overrideMimeType' in h) {
         h.overrideMimeType('text/plain; charset=x-user-defined');
-      } else if ('responseType' in h) {
-        // old browsers (XMLHttpRequest-compliant)
-        (h as any).responseType = 'arraybuffer';
-      } else {
-        // IE9 (Microsoft.XMLHTTP-compliant)
-        (h as any).setRequestHeader('Accept-Charset', 'x-user-defined');
       }
 
       h.onloadstart = () => {
@@ -1132,7 +1127,7 @@ const SuperGif = (opts: UserOptions) => {
           data = new Uint8Array(data);
         }
 
-        stream = new (Stream as any)(data);
+        stream = new (Stream as any)(data); // eslint-disable-line @typescript-eslint/no-explicit-any
         setTimeout(doParse, 0);
       };
       h.onprogress = ({ lengthComputable, loaded, total }) => {
@@ -1149,7 +1144,7 @@ const SuperGif = (opts: UserOptions) => {
     load_raw(arr: string | Uint8Array, callback: (gif: HTMLImageElement) => void) {
       if (!load_setup(callback)) return;
       if (!initialized) init();
-      stream = new (Stream as any)(arr);
+      stream = new (Stream as any)(arr); // eslint-disable-line @typescript-eslint/no-explicit-any
       setTimeout(doParse, 0);
     },
     set_frame_offset: setFrameOffset,

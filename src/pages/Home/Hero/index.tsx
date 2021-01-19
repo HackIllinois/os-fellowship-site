@@ -34,7 +34,7 @@ const Section1: React.FC = () => (
       <h1>Open Source</h1>
       <h1>Fellowship</h1>
       <h3>February 15 - March 5, 2021</h3>
-      <a className={styles.applyButton} href="/">Coming Soon...</a>
+      <a className={styles.applyButton} href="https://docs.google.com/forms/d/e/1FAIpQLSeCUg51ZyealgmuZygU7atgu8FduzI3WvNeKfiAxuiUHml6wQ/viewform?usp=sf_link">Apply Now</a>
     </div>
 
     <p className={styles.description}>

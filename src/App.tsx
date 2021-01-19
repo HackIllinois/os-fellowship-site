@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import Home from 'pages/Home';
@@ -20,6 +20,10 @@ function App(): JSX.Element {
 
       <Route path="/auth" exact>
         <Auth />
+      </Route>
+
+      <Route path="/">
+        <Redirect to="/" />
       </Route>
     </Switch>
   );

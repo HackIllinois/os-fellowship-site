@@ -312,14 +312,15 @@ const lzwDecode = (minCodeSize: number, data: string) => {
   let code;
   let last;
 
-  while (code !== eoiCode) {
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
     last = code as number;
     code = readCode(codeSize);
 
     if (code === clearCode) {
       clear();
     } else {
-      // if (code === eoiCode) break;
+      if (code === eoiCode) break;
 
       if (code < dict.length) {
         if (last !== clearCode) {

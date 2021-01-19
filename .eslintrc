@@ -11,6 +11,7 @@
     "no-plusplus": "off",
     "no-bitwise": "off",
     "no-param-reassign": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

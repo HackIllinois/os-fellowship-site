@@ -36,7 +36,7 @@
     loop_mode      Optional. Setting this to false will force disable looping of the gif.
     auto_play       Optional. Same as the rel:auto_play attribute above, this arg overrides the img tag info.
     max_width      Optional. Scale images over max_width down to max_width. Helpful with mobile.
-      on_end        Optional. Add a callback for when the gif reaches the end of a single loop (one iteration). The first argument passed will be the gif HTMLElement.
+    on_end        Optional. Add a callback for when the gif reaches the end of a single loop (one iteration). The first argument passed will be the gif HTMLElement.
     loop_delay      Optional. The amount of time to pause (in ms) after each single loop (iteration).
     draw_while_loading  Optional. Determines whether the gif will be drawn to the canvas whilst it is loaded.
     show_progress_bar  Optional. Only applies when draw_while_loading is set to true.
@@ -185,6 +185,7 @@ type Options = {
   progressbar_height?: number,
   progressbar_background_color?: string,
   progressbar_foreground_color?: string,
+  class_name?: string,
 
   vp_l: number,
   vp_t: number,
@@ -199,7 +200,7 @@ type Options = {
 );
 
 type UserOptions = Partial<Omit<Options, 'is_vp' | 'gif'>> & {
-  gif: HTMLImageElement,
+  gif: HTMLImageElement, // so that `gif` is required
 };
 
 type FrameOffset = {
@@ -1040,13 +1041,17 @@ const SuperGif = (opts: UserOptions) => {
 
     toolbar.style.minWidth = `${gif.width}px`;
 
+    if (opts.class_name) {
+      canvas.className = opts.class_name;
+    }
+
     div.className = 'jsgif';
     toolbar.className = 'jsgif_toolbar';
     div.appendChild(canvas);
     div.appendChild(toolbar);
 
     parent?.insertBefore(div, gif);
-    parent?.removeChild(gif);
+    // parent?.removeChild(gif);
 
     if (options.c_w && options.c_h) setSizes(options.c_w, options.c_h);
     initialized = true;

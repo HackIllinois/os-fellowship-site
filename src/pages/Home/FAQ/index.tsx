@@ -1,68 +1,71 @@
-import React, { useRef } from 'react';
-import { debounce } from 'lodash-es';
+import React, { useEffect, useRef } from 'react';
+import { debounce, clamp } from 'lodash-es';
+import lottie, { AnimationItem } from 'lottie-web';
 
 import BLOB from 'assets/home/faq/blob.svg';
-import CUP from 'assets/home/faq/cup.gif';
-import SuperGif from 'util/libgif';
 import styles from './styles.module.scss';
+import animationData from './data.json';
 
-type SuperGifType = ReturnType<typeof SuperGif>;
+const setupScrollAnimation = (animation: AnimationItem, container: HTMLElement) => {
+  const calculateScrollPositions = () => {
+    const fullyVisibleDistance = window.innerHeight - container.offsetHeight;
+    const offsetTop = container.getBoundingClientRect().top + window.scrollY;
+    return {
+      // we want to start animation when the bottom 20% of it is still hidden (the rest is visible)
+      startY: offsetTop - fullyVisibleDistance - (0.2 * container.offsetHeight),
+      endY: offsetTop - 5,
+    };
+  };
+
+  let { startY, endY } = calculateScrollPositions();
+
+  const scroll = () => {
+    const numFrames = animation.totalFrames;
+    const percentage = clamp((window.scrollY - startY) / (endY - startY), 0.01, 1);
+    const frame = numFrames - (percentage * numFrames); // `numFrames -` since we want the animation to go the other way
+    animation.goToAndStop(frame, true);
+  };
+
+  scroll();
+
+  window.addEventListener('resize', debounce(() => {
+    ({ startY, endY } = calculateScrollPositions());
+    scroll();
+  }, 150));
+  document.addEventListener('scroll', scroll);
+};
 
 const FAQ = (): JSX.Element => {
-  const supergifContainer = useRef<SuperGifType | null>(null);
+  const animationContainer = useRef<HTMLDivElement>(null);
 
-  const setupScrollAnimation = (supergif: SuperGifType) => {
-    const canvas = supergif.get_canvas();
-    const numFrames = supergif.get_length() / 2; // divide by 2 since the gif contains both forward and backward animation
+  useEffect(() => {
+    lottie.destroy();
 
-    const calculateScrollPositions = () => {
-      const fullyVisibleDistance = window.innerHeight - canvas.offsetHeight;
-      const canvasOffsetTop = canvas.getBoundingClientRect().top + window.scrollY;
-      return {
-        // we want to start animation when the bottom 20% of the canvas is still hidden (the rest is visible)
-        startY: canvasOffsetTop - fullyVisibleDistance - (0.25 * canvas.offsetHeight),
-        endY: canvasOffsetTop,
-      };
-    };
-
-    let { startY, endY } = calculateScrollPositions();
-
-    const scroll = () => {
-      const scrollPosition = Math.min(Math.max(startY, window.scrollY), endY);
-      const frame = ((scrollPosition - startY) / (endY - startY)) * numFrames;
-      supergif.move_to(Math.floor(numFrames - frame)); // since we want the animation to go the other way
-    };
-
-    scroll();
-
-    window.addEventListener('resize', debounce(() => {
-      ({ startY, endY } = calculateScrollPositions());
-      scroll();
-    }, 150));
-    document.addEventListener('scroll', scroll);
-  };
-
-  const setSuperGif = (ref: HTMLImageElement | null): void => {
-    if (ref) {
-      supergifContainer.current = SuperGif({
-        gif: ref,
-        class_name: styles.cup,
-        draw_while_loading: false,
-        auto_play: false,
+    if (animationContainer.current) {
+      const animation = lottie.loadAnimation({
+        container: animationContainer.current,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        animationData,
       });
 
-      supergifContainer.current.load(() => {
-        ref.remove();
-        setupScrollAnimation(supergifContainer.current as SuperGifType);
+      animation.addEventListener('DOMLoaded', () => {
+        const svgElement = animationContainer.current?.querySelector('svg');
+        if (svgElement) {
+          svgElement.setAttribute('viewBox', '48 57 435 580');
+        }
       });
+
+      setupScrollAnimation(animation, animationContainer.current);
     }
-  };
+  }, []);
 
   return (
     <div className={styles.faq}>
       <img className={styles.blob} src={BLOB} alt="" />
 
-      <img className={styles.cup} src={CUP} alt="" ref={setSuperGif} />
+      <div className={styles.cup} ref={animationContainer} />
 
       <div className={styles.content}>
         <h1>FAQ</h1>
@@ -86,7 +89,7 @@ const FAQ = (): JSX.Element => {
 
         <h4>When is the Open Source Fellowship?</h4>
         <p>
-          Open Source Fellowship will kick off on February 15th, 2021, and conclude on March 5th, 2021.
+          Open Source Fellowship will kick off on February 12th, 2021, and conclude on March 4th, 2021.
         </p>
 
         <h4>Who can participate in the Open Source Fellowship?</h4>

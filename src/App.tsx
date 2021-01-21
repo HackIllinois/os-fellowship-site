@@ -1,27 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import Home from 'pages/Home';
 import Auth from 'pages/Auth';
-import StaticFileRedirect from 'components/StaticFileRedirect';
 
 function App(): JSX.Element {
+  const location = useLocation();
+  useEffect(() => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  }, [location]);
+
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+    <Switch>
+      <Route path="/" exact>
+        <Home />
+      </Route>
 
-        <Route path="/auth" exact>
-          <Auth />
-        </Route>
+      <Route path="/auth" exact>
+        <Auth />
+      </Route>
 
-        <Route path="/sponsor" exact>
-          <StaticFileRedirect to="/documents/sponsorship.pdf" />
-        </Route>
-      </Switch>
-    </Router>
+      <Route path="/">
+        <Redirect to="/" />
+      </Route>
+    </Switch>
   );
 }
 

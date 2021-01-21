@@ -33,15 +33,15 @@ const Section1: React.FC = () => (
       <h4>HackIllinois presents</h4>
       <h1>Open Source</h1>
       <h1>Fellowship</h1>
-      <h3>February 15 - March 5, 2021</h3>
-      <a className={styles.applyButton} href="/">Coming Soon...</a>
+      <h3>February 12 - March 4, 2021</h3>
+      <a className={styles.applyButton} href="https://docs.google.com/forms/d/e/1FAIpQLSeCUg51ZyealgmuZygU7atgu8FduzI3WvNeKfiAxuiUHml6wQ/viewform?usp=sf_link">Apply Now</a>
     </div>
 
     <p className={styles.description}>
       Keeping in mind the virtual semester college students across the country are facing and
       the pivotal role we can play—now more than ever before—in bringing together a community of
       passionate developers and ideators, HackIllinois is announcing a brand new initiative in
-      the form of Open Source Fellowship, held from February 15th-March 5th, 2021.
+      the form of Open Source Fellowship, held from February 12th - March 4th, 2021.
     </p>
   </div>
 );

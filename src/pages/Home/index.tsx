@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 const Home: React.FC = () => (
   <div className={styles.home}>
     <Hero />
+    <div className={styles.landscapeExtension} />
     <EventInfo />
     <FAQ />
   </div>

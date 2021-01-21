@@ -43,14 +43,19 @@
 
   .cup {
     z-index: 1;
+    
     position: absolute;
     right: 7%;
     bottom: 20%;
-    width: 30%;
+
+    --width: 30vw;
+    width: var(--width);
     max-width: 540px;
+    height: calc(1.3 * var(--width));
+    max-height: calc(1.3 * 540px);
 
     @media screen and (max-width: 1200px) {
-      width: 23%;
+      --width: 23%;
       bottom: 30%;
     }
 
@@ -59,7 +64,7 @@
       right: auto;
       left: 50%;
       transform: translateX(-75%);
-      width: 120px;
+      --width: 120px;
     }
   }
 

@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from './Hero';
 import EventInfo from './EventInfo';
 import FAQ from './FAQ';
+import Mentors from './Mentors';
 
 import styles from './styles.module.scss';
 
@@ -11,6 +12,7 @@ const Home: React.FC = () => (
     <Hero />
     <EventInfo />
     <FAQ />
+    <Mentors />
   </div>
 );
 

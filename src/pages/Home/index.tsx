@@ -4,6 +4,7 @@ import Hero from './Hero';
 import EventInfo from './EventInfo';
 import FAQ from './FAQ';
 import Timeline from './Timeline';
+import Mentors from './Mentors';
 
 import styles from './styles.module.scss';
 
@@ -13,6 +14,7 @@ const Home: React.FC = () => (
     <div className={styles.landscapeExtension} />
     <EventInfo />
     <FAQ />
+    <Mentors />
     <Timeline />
   </div>
 );

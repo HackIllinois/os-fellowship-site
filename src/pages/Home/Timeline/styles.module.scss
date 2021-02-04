@@ -1,0 +1,136 @@
+.timeline {
+  color: white;
+  margin-top: 100px;
+
+  h2 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.1em;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+    
+    @media screen and (max-width: 1200px) {
+      width: 85%;
+    }
+    
+    .decorations {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      --scale: 1;
+      @media screen and (max-width: 900px) {
+        --scale: 0.9;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+      
+      img {
+        position: relative;
+        margin: 10px auto;
+        z-index: 1;
+      }
+      
+      .fireStick {
+        width: calc(var(--scale) * 140px);
+        right: 35px;
+      }
+      
+      .rocks {
+        width: calc(var(--scale) * 120px);
+      }
+      
+      .sticks {
+        width: calc(var(--scale) * 125px);
+        right: 20px;
+      }
+      
+      .campfire {
+        width: calc(var(--scale) * 150px);
+      }
+      
+      .smoke {
+        position: absolute;
+        height: 68%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-60%, -55%);
+        z-index: 0;
+
+        @media screen and (max-width: 900px) {
+          width: 110%;
+          height: 74%;
+        }
+      }
+    }
+    
+    .content {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .timePoint {
+      h3 {
+        color: #46959F;
+        font-weight: 600;
+        font-size: 1.7em;
+        margin-bottom: 0;
+      }
+      
+      p {
+        font-size: .95em;
+        font-weight: 300;
+        line-height: 1.8em;
+
+        @media screen and (min-width: 1800px) {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .mobileContent {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+      }
+
+      .timePoint {
+        font-size: .85em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 0;
+        @media screen and (max-width: 600px) {
+          align-items: initial;
+          margin: 0;
+        }
+
+        .decoration {
+          width: 20%;
+          @media screen and (max-width: 600px) {
+            align-self: flex-start;
+            margin-top: 50px;
+          }
+        }
+
+        .text {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

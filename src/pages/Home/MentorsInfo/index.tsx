@@ -4,8 +4,8 @@ import STARS from 'assets/home/mentors/stars.svg';
 import TELESCOPE from 'assets/home/mentors/telescope.svg';
 import styles from './styles.module.scss';
 
-const Mentors = (): JSX.Element => (
-  <div className={styles.mentors}>
+const MentorsInfo = (): JSX.Element => (
+  <div className={styles.mentorsInfo}>
     <img className={styles.stars} src={STARS} alt="" />
 
     <img className={styles.telescope} src={TELESCOPE} alt="" />
@@ -37,4 +37,4 @@ const Mentors = (): JSX.Element => (
   </div>
 );
 
-export default Mentors;
+export default MentorsInfo;

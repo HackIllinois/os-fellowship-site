@@ -11,7 +11,10 @@ import styles from './styles.module.scss';
 const Home: React.FC = () => (
   <div className={styles.home}>
     <Hero />
-    <div className={styles.landscapeExtension} />
+
+    {/* style inlined because otherwise the '0px' gets minified to '0', which breaks it */}
+    <div className={styles.landscapeExtension} style={{ height: 'min(max(0px, calc((722px - 100vh)/10 + 65px)), 65px)' }} />
+
     <EventInfo />
     <FAQ />
     <Mentors />

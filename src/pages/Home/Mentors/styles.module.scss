@@ -108,6 +108,9 @@
       display: block;
       text-decoration: none;
       overflow-wrap: break-word;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .bio {

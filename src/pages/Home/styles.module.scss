@@ -1,11 +1,25 @@
 .home {
   background-color: #1E2E55;
   position: relative;
-  padding-bottom: 50px;
-
+  
   .landscapeExtension {
     position: relative;
     margin-top: -5px;
     background-color: #151C44;
+  }
+  
+  .gradient {
+    background: linear-gradient(359.81deg, #040926 12.4%, rgba(21, 28, 68, 0) 95.75%);
+    padding-top: 200px;
+    padding-bottom: 350px;
+    position: relative;
+    overflow: hidden;
+
+    .backgroundBlobs {
+      position: absolute;
+      height: 101%;
+      width: 100%;
+      top: 0;
+    }
   }
 }

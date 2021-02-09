@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Kelly Shen",
+    "headshot": "kelly_shen.jpg",
+    "github": "kelly-shen",
+    "projects": ["https://github.com/JuliaLang"],
+    "bio": ""
+  },
+  {
+    "name": "Jason R. Coombs",
+    "headshot": "jason_coombs.jpg",
+    "github": "jaraco",
+    "projects": ["https://github.com/pypa/setuptools"],
+    "bio": ""
+  },
+  {
+    "name": "Matthew Turk",
+    "headshot": "matthew_turk.jpg",
+    "github": "matthewturk",
+    "projects": ["https://github.com/yt-project/yt/"],
+    "bio": "Matt is an Assistant Professor at the School of Information Sciences at UIUC, where he works on data visualization, studying open source software dynamics, and the analysis of datasets in the natural sciences"
+  },
+  {
+    "name": "Jeff Bezanson",
+    "headshot": "jeff_bezanson.jpeg",
+    "github": "JeffBezanson",
+    "projects": ["https://github.com/JuliaLang/julia/"],
+    "bio": "Jeff is a co-creator of the Julia Language and co-founder of Julia Computing, Inc. His main interests include compilers, language run-time systems, parallel and numerical computing, and applications in data science, machine learning, and applied science. He received a PhD in computer science from MIT in 2015."
+  },
+  {
+    "name": "Michael Kruse",
+    "headshot": "michael_kruse.jpg",
+    "github": "meinersbur",
+    "projects": ["https://github.com/llvm"],
+    "bio": "Michael graduated with a Master’s degree in computer science from the University of Paderborn (Germany) and a PhD from the University Paris-Sud 11. After a Post-Doc at the École Normale Supérieur, he currently works at Argonne National Laboratory.\n\nHis topics of research are optimizing compilers for high performance computing, such as Lattice QCD, especially loop optimizations. He contributes to the LLVM compiler infrastructure including Polly, LLVM’s polyhedral optimizer. Currently, he works on a compiler intermediate representation for loop optimizations, standardizing loop transformations in OpenMP and implementing them in Clang and Flang."
+  },
+  {
+    "name": "Lewis John McGibbney",
+    "headshot": "lewis_mcgibbney.png",
+    "github": "lewismc",
+    "projects": ["https://github.com/apache/tika"],
+    "bio": "Currently employed as a Enterprise Search Technologist at NASA's Jet Propulsion Laboratory. I am a passionate open source enthusiast. I am a member of the Apache Software Foundation where I write most of my code."
+  },
+  {
+    "name": "Pablo S Blum de Aguiar",
+    "headshot": "pablo_aguiar.png",
+    "github": "scorphus",
+    "projects": ["https://github.com/nvbn/thefuck", "https://github.com/oh-my-fish/oh-my-fish/"],
+    "bio": "Pablo is a Computer Scientist from Brazil, working as Lead Software Engineer in Germany. He's passionate about computer programming, cycling and coffee. He's been actively contributing to open source for at least 15 years. He mostly writes Python and Go. More recently, he's found himself in love with Elixir and Rust."
+  },
+  {
+    "name": "Aidan Feldman",
+    "headshot": "aidan_feldman.jpg",
+    "github": "afeld",
+    "projects": ["https://github.com/pandas-dev/pandas"],
+    "bio": "Aidan Feldman is a civic technologist by day, dancer by night. He has worked as a Technology Director, Data Engineer, Innovation Specialist, and DevOps Consultant for various government agencies, including 18F and New York City Planning Labs. Before that, he was on the education team at GitHub and other technology and publishing companies. Aidan got into the pandas project through teaching classes on Python for public policy students at NYU.\n\nWhen not hacking bureaucracy, Aidan likes biking and baking, and has another life as a professional modern dancer. Also, he's from Illinois!"
+  },
+  {
+    "name": "Raymond Zhao",
+    "headshot": "vscode.png",
+    "headshotStyles": {
+      "backgroundSize": "75%",
+      "backgroundPosition": "center center"
+    },
+    "github": "rzhao271",
+    "projects": ["https://github.com/microsoft/vscode/"],
+    "bio": "Software Developer @ MSFT, working on the VS Code Emmet extension | Minimalist"
+  },
+  {
+    "name": "Rachel Macfarlane",
+    "headshot": "vscode.png",
+    "headshotStyles": {
+      "backgroundSize": "75%",
+      "backgroundPosition": "center center"
+    },
+    "github": "RMacfarlane",
+    "projects": ["https://github.com/microsoft/vscode/"],
+    "bio": "Hi! I've been working at Microsoft since I graduated college 5 years ago. For the last 3 years, I've been very lucky to work on VSCode - some areas I own are issue reporting and authentication, and I spend a lot of time thinking about pull requests. In my free time, I like growing plants (my apartment has over 80 houseplants), hiking, biking, and cooking."
+  },
+  {
+    "name": "Tyler Leonhardt",
+    "headshot": "tyler leonhardt.jpeg",
+    "github": "TylerLeonhardt",
+    "projects": ["https://github.com/Microsoft/vscode"],
+    "bio": "I work on the VS Code team at Microsoft.\n\nAll my work is open source.\n\nSometimes people give me a mic and I talk about 💻. You can also find me on Twitch live-coding projects of all kinds.\n\nI also like ☕️ with the word \"mouthfeel\" on the packaging."
+  },
+  {
+    "name": "PrairieLearn Team",
+    "headshot": "prairielearn.png",
+    "headshotStyles": {
+      "backgroundSize": "75%",
+      "backgroundPosition": "center center",
+      "backgroundColor": "white"
+    },
+    "github": "PrairieLearn/PrairieLearn",
+    "projects": ["https://github.com/PrairieLearn/PrairieLearn"],
+    "bio": "PrairieLearn is an open-source online assessment system that provides both the easiness to create simple question types and the flexibility to create novel and/or unique questions to fit the instructor's educational needs. For the HackIllinois, the PrairieLearn team will be mentoring two groups that would like to participate in the following projects: 1) develop a PrairieLearn element that uses the library https://www.diagrams.net to create questions such as finite state machines; and 2) incorporate new features for collaborative learning and group projects, such as real-time synchronization, group roles, visualization tools, etc. The PrairieLearn team mentoring these activities will consist of a diverse of group of professors, graduate and former students, including Matt West, Mariana Silva, Nathan Walters, Geoffrey Herman, Abdu Alawini, Dave Mussulman, Nicolas Nytko, and others. "
+  }
+]

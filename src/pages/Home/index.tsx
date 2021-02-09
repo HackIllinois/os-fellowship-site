@@ -1,11 +1,13 @@
 import React from 'react';
 
+import BACKGROUND_BLOBS from 'assets/home/background_blobs.svg';
+
 import Hero from './Hero';
 import EventInfo from './EventInfo';
 import FAQ from './FAQ';
-import Timeline from './Timeline';
+import MentorsInfo from './MentorsInfo';
 import Mentors from './Mentors';
-
+import Timeline from './Timeline';
 import styles from './styles.module.scss';
 
 const Home: React.FC = () => (
@@ -17,8 +19,13 @@ const Home: React.FC = () => (
 
     <EventInfo />
     <FAQ />
-    <Mentors />
-    <Timeline />
+    <MentorsInfo />
+
+    <div className={styles.gradient}>
+      <img className={styles.backgroundBlobs} src={BACKGROUND_BLOBS} alt="" />
+      <Mentors />
+      <Timeline />
+    </div>
   </div>
 );
 

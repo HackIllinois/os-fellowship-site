@@ -59,7 +59,7 @@
     "name": "Raymond Zhao",
     "headshot": "vscode.png",
     "headshotStyles": {
-      "backgroundSize": "75%",
+      "backgroundSize": "80%",
       "backgroundPosition": "center center"
     },
     "github": "rzhao271",
@@ -70,7 +70,7 @@
     "name": "Rachel Macfarlane",
     "headshot": "vscode.png",
     "headshotStyles": {
-      "backgroundSize": "75%",
+      "backgroundSize": "80%",
       "backgroundPosition": "center center"
     },
     "github": "RMacfarlane",
@@ -100,7 +100,7 @@
     "name": "Eric Amodio",
     "headshot": "vscode.png",
     "headshotStyles": {
-      "backgroundSize": "75%",
+      "backgroundSize": "80%",
       "backgroundPosition": "center center"
     },
     "github": "eamodio",

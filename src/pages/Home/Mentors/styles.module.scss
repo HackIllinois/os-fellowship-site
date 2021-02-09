@@ -71,6 +71,10 @@
       font-size: .85em;
     }
 
+    @media screen and (min-width: 1800px) {
+      font-size: 1.05em;
+    }
+
     .headshot {
       min-width: var(--image-size);
       width: var(--image-size);

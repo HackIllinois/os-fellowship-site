@@ -1,39 +1,27 @@
 import React from 'react';
 
-import STARS from 'assets/home/mentors/stars.svg';
-import TELESCOPE from 'assets/home/mentors/telescope.svg';
 import styles from './styles.module.scss';
+import mentors from './mentors.json';
+
+// sort mentors alphabetically by name
+mentors.sort(({ name: n1 }, { name: n2 }) => n1.localeCompare(n2));
 
 const Mentors = (): JSX.Element => (
   <div className={styles.mentors}>
-    <img className={styles.stars} src={STARS} alt="" />
+    <h3 className={styles.title}>Mentors</h3>
 
-    <img className={styles.telescope} src={TELESCOPE} alt="" />
-
-    <div className={styles.content}>
-      <h1>Mentors</h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed faucibus nisi, egestas egestas habitasse tortor,
-        quis sit. Pellentesque a consequat, nibh fermentum dis eget pellentesque arcu, eget. Bibendum ullamcorper eget sit elit
-        egestas enim, sed eu elit. Nec egestas quam feugiat vulputate molestie. Nullam in imperdiet sem sed. Ullamcorper massa,
-        enim orci iaculis amet dui. In amet, dolor purus non dignissim.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed faucibus nisi, egestas egestas habitasse tortor,
-        quis sit. Pellentesque a consequat, nibh fermentum dis eget pellentesque arcu, eget. Bibendum ullamcorper eget sit elit
-        egestas enim, sed eu elit. Nec egestas quam feugiat vulputate molestie. Nullam in imperdiet sem sed. Ullamcorper massa,
-        enim orci iaculis amet dui. In amet, dolor purus non dignissim.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed faucibus nisi, egestas egestas habitasse tortor,
-        quis sit. Pellentesque a consequat, nibh fermentum dis eget pellentesque arcu, eget. Bibendum ullamcorper eget sit elit
-        egestas enim, sed eu elit. Nec egestas quam feugiat vulputate molestie. Nullam in imperdiet sem sed. Ullamcorper massa,
-        enim orci iaculis amet dui. In amet, dolor purus non dignissim.
-      </p>
-    </div>
+    {mentors.map(({ name, projects, headshot, bio, headshotStyles = {} }) => (
+      <div className={styles.mentor}>
+        <div className={styles.headshot} style={{ backgroundImage: `url("/mentor_photos/${headshot}")`, ...headshotStyles }} />
+        <div>
+          <h4 className={styles.name}>{name}</h4>
+          {projects.map((project) => (
+            <a className={styles.project} href={project} target="_blank" rel="noopener noreferrer">{project}</a>
+          ))}
+          <p className={styles.bio}>{bio}</p>
+        </div>
+      </div>
+    ))}
   </div>
 );
 

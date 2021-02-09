@@ -1,0 +1,88 @@
+.mentorsInfo {
+  position: relative;
+  overflow: hidden;
+  font-size: .98em;
+  margin-top: 50px;
+
+  @media screen and (max-width: 1800px) {
+    font-size: .9em;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+  }
+
+  .stars {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    transform: translateX(5%);
+
+    @media screen and (max-width: 1200px) {
+      width: 1200px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 300px;
+      left: 50%;
+      transform: translate(-55%, -40%);
+    }
+  }
+
+  .telescope {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transform: translate(-38%, 95%);
+
+    @media screen and (max-width: 767px) {
+      height: 80px;
+      transform: translate(-2%, 30%);
+    }
+  }
+
+  .content {
+    position: relative;
+    left: 15%;
+    z-index: 2;
+    line-height: 1.7em;
+
+    margin: 120px 0 100px min(10%, 180px);
+    padding-bottom: 40px;
+    width: 55%;
+    max-width: 900px;
+
+    @media screen and (max-width: 1200px) {
+      left: 25%;
+      margin-bottom: 110px;
+      font-size: .95em;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: 0;
+      left: 0;
+      font-size: .9em;
+      width: 75%;
+    }
+
+    h1 {
+      font-size: 2.15em;
+      font-weight: 600;
+      margin-bottom: 35px;
+      color: #fff;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.6em;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      margin-top: 3px;
+      color: #fff;
+    }
+  }
+}

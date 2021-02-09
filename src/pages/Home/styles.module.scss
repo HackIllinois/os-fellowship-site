@@ -10,16 +10,47 @@
   
   .gradient {
     background: linear-gradient(359.81deg, #040926 12.4%, rgba(21, 28, 68, 0) 95.75%);
-    padding-top: 200px;
+    padding-top: 300px;
     padding-bottom: 350px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 150px;
+      padding-top: 50px;
+    }
 
     .backgroundBlobs {
       position: absolute;
       height: 101%;
       width: 100%;
       top: 0;
+
+      &.tablet {
+        display: none;
+      }
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+        &.tablet {
+          display: block;
+        }
+      }
+    }
+
+    .lantern {
+      position: absolute;
+      right: 150px;
+      top: 130px;
+      width: 18.75%;
+      min-width: 250px;
+
+      @media screen and (max-width: 1200px) {
+        min-width: 0;
+        width: 175px;
+        top: 0;
+        right: calc(18% - 110px);
+      }
     }
   }
 }

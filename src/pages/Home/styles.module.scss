@@ -19,6 +19,11 @@
       margin-top: 150px;
       padding-top: 50px;
     }
+    
+    @media screen and (max-width: 767px) {
+      padding-top: 100px;
+      margin-top: 0;
+    }
 
     .backgroundBlobs {
       position: absolute;
@@ -36,6 +41,12 @@
           display: block;
         }
       }
+
+      @media screen and (max-width: 767px) {
+        &.tablet {
+          display: none;
+        }
+      }
     }
 
     .lantern {
@@ -50,6 +61,14 @@
         width: 175px;
         top: 0;
         right: calc(18% - 110px);
+      }
+
+      @media screen and (max-width: 767px) {
+        top: 0;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
       }
     }
   }

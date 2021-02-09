@@ -19,7 +19,6 @@
     right: 0;
     width: 85%;
   }
-  
 
   .title {
     font-size: 2.2em;
@@ -33,7 +32,7 @@
 
     @media screen and (max-width: 767px) {
       font-size: 1.6em;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 
@@ -48,6 +47,16 @@
       --image-size: 200px;
     }
 
+    @media screen and (max-width: 767px) {
+      --image-size: 150px;
+      display: block;
+      font-size: .95em;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: .85em;
+    }
+
     .headshot {
       min-width: var(--image-size);
       width: var(--image-size);
@@ -56,6 +65,9 @@
       background-repeat: no-repeat;
       border-radius: 200px;
       margin-right: 50px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
     }
 
     .name {
@@ -76,6 +88,7 @@
       margin-top: 5px;
       display: block;
       text-decoration: none;
+      overflow-wrap: break-word;
     }
 
     .bio {
@@ -83,6 +96,9 @@
       font-weight: 300;
       white-space: pre-line;
       font-size: .95em;
+      @media screen and (max-width: 767px) {
+        font-weight: 400;
+      }
     }
   }
 }

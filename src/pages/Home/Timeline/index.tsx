@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import FIRE_STICK from 'assets/home/timeline/fire_stick.svg';
 import ROCKS from 'assets/home/timeline/rocks.svg';
@@ -7,13 +8,10 @@ import CAMPFIRE from 'assets/home/timeline/campfire.svg';
 import SMOKE from 'assets/home/timeline/smoke.svg';
 
 import styles from './styles.module.scss';
-import timeline from './timeline.json';
-
-const decorations = [FIRE_STICK, ROCKS, STICKS, CAMPFIRE];
 
 const Timeline = (): JSX.Element => (
   <div className={styles.timeline}>
-    <h2>TIMELINE</h2>
+    <h2 className={clsx(styles.title, styles.mobile)}>TIMELINE</h2>
 
     <div className={styles.container}>
       <div className={styles.decorations}>
@@ -25,24 +23,23 @@ const Timeline = (): JSX.Element => (
       </div>
 
       <div className={styles.content}>
-        {timeline.map(({ title, text }) => (
-          <div className={styles.timePoint}>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.mobileContent}>
-        {timeline.map(({ title, text }, i) => (
-          <div className={styles.timePoint}>
-            <img className={styles.decoration} src={decorations[i]} alt="" />
-            <div className={styles.text}>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </div>
-          </div>
-        ))}
+        <h2 className={styles.title}>TIMELINE</h2>
+        <p className={styles.text}>
+          On Friday, February 12th, students will have the opportunity to “tour” the various projects the Open Source Fellowship has to offer, learning more about the specific project requirements and speaking with mentors to answer any questions.
+          <br />
+          <br />
+          At the end of the day, we’ll release a form allowing students to pick their top 3 project preferences. After this, we’ll preliminarily match students to project groups based on:
+          <ul>
+            <li>Skill level</li>
+            <li>Overall project experience, particularly with the project’s tech stack</li>
+            <li>Additional preferences and considerations from mentors</li>
+          </ul>
+          <br />
+          Over the weekend of the 13th and 14th, any mentors who wish to interview students further to ensure the best fit for their project group will also get the chance to do so.
+          <br />
+          <br />
+          Finally, with this feedback in account, we’ll release final project matches at the beginning of Monday, February 15th, officially kicking off the Fellowship Program.
+        </p>
       </div>
     </div>
   </div>

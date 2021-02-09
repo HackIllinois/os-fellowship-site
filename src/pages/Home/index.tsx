@@ -8,7 +8,7 @@ import LANTERN from 'assets/home/lantern.svg';
 import Hero from './Hero';
 import EventInfo from './EventInfo';
 import FAQ from './FAQ';
-import MentorsInfo from './MentorsInfo';
+// import MentorsInfo from './MentorsInfo';
 import Mentors from './Mentors';
 import Timeline from './Timeline';
 import styles from './styles.module.scss';
@@ -22,7 +22,7 @@ const Home: React.FC = () => (
 
     <EventInfo />
     <FAQ />
-    <MentorsInfo />
+    {/* <MentorsInfo /> */}
 
     <div className={styles.gradient}>
       <img className={styles.backgroundBlobs} src={BACKGROUND_BLOBS} alt="" />

@@ -1,13 +1,42 @@
 import React, { useEffect, useRef } from 'react';
-import lottie, { AnimationDirection } from 'lottie-web';
+import { debounce, clamp } from 'lodash-es';
+import lottie, { AnimationItem } from 'lottie-web';
 
 import BLOB from 'assets/home/faq/blob.svg';
 import styles from './styles.module.scss';
 import animationData from './data.json';
 
+const setupScrollAnimation = (animation: AnimationItem, container: HTMLElement) => {
+  const calculateScrollPositions = () => {
+    const fullyVisibleDistance = window.innerHeight - container.offsetHeight;
+    const offsetTop = container.getBoundingClientRect().top + window.scrollY;
+    return {
+      // we want to start animation when the bottom 20% of it is still hidden (the rest is visible)
+      startY: offsetTop - fullyVisibleDistance - (0.2 * container.offsetHeight),
+      endY: offsetTop - 5,
+    };
+  };
+
+  let { startY, endY } = calculateScrollPositions();
+
+  const scroll = () => {
+    const numFrames = animation.totalFrames;
+    const percentage = clamp((window.scrollY - startY) / (endY - startY), 0.01, 1);
+    const frame = numFrames - (percentage * numFrames); // `numFrames -` since we want the animation to go the other way
+    animation.goToAndStop(frame, true);
+  };
+
+  scroll();
+
+  window.addEventListener('resize', debounce(() => {
+    ({ startY, endY } = calculateScrollPositions());
+    scroll();
+  }, 150));
+  document.addEventListener('scroll', scroll);
+};
+
 const FAQ = (): JSX.Element => {
   const animationContainer = useRef<HTMLDivElement>(null);
-  const direction = useRef<AnimationDirection>(1);
 
   useEffect(() => {
     lottie.destroy();
@@ -17,7 +46,7 @@ const FAQ = (): JSX.Element => {
         container: animationContainer.current,
         renderer: 'svg',
         loop: false,
-        autoplay: true,
+        autoplay: false,
         animationData,
       });
 
@@ -28,11 +57,7 @@ const FAQ = (): JSX.Element => {
         }
       });
 
-      animation.addEventListener('complete', () => {
-        direction.current *= -1;
-        animation.setDirection(direction.current as AnimationDirection);
-        animation.play();
-      });
+      setupScrollAnimation(animation, animationContainer.current);
     }
   }, []);
 

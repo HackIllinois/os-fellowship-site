@@ -13,7 +13,7 @@ function App(): JSX.Element {
 
     // temp
     const query = new URLSearchParams(location.search);
-    document.body.style.setProperty('--lheight', `${query.get('line-height')}em`);
+    document.body.style.setProperty('--lheight', `${query.get('line-height') || 1.5}em`);
   }, [location]);
 
   return (

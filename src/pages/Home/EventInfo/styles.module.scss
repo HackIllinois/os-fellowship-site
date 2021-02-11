@@ -62,7 +62,7 @@
       
       color: white;
       text-align: center;
-      line-height: 1.5em;
+      line-height: var(--lheight);
       font-size: .95em;
 
       margin-left: 35%;
@@ -117,7 +117,7 @@
     p {
       color: white;
       font-size: 1em;
-      line-height: 1.5em;
+      line-height: var(--lheight);
       margin-bottom: 35px;
 
       &.bold {

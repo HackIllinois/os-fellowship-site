@@ -10,6 +10,10 @@ function App(): JSX.Element {
   useEffect(() => {
     ReactGA.set({ page: location.pathname });
     ReactGA.pageview(location.pathname);
+
+    // temp
+    const query = new URLSearchParams(location.search);
+    document.body.style.setProperty('--lheight', `${query.get('line-height')}em`);
   }, [location]);
 
   return (

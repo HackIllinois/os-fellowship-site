@@ -114,7 +114,7 @@
     }
 
     .bio {
-      line-height: 1.5em;
+      line-height: var(--lheight);
       font-weight: 300;
       white-space: pre-line;
       font-size: .95em;

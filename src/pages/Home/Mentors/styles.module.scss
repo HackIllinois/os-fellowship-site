@@ -121,6 +121,14 @@
       @media screen and (max-width: 767px) {
         font-weight: 400;
       }
+
+      a {
+        color: #ADD8CD;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

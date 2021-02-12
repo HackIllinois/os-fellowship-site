@@ -27,7 +27,7 @@ const Mentors = (): JSX.Element => (
           {projects.map(({ name: projectName, link }) => (
             <a className={styles.project} href={link} target="_blank" rel="noopener noreferrer">{projectName}</a>
           ))}
-          <p className={styles.bio}>{bio}</p>
+          <p className={styles.bio} dangerouslySetInnerHTML={{ __html: bio }} />
         </div>
       </div>
     ))}

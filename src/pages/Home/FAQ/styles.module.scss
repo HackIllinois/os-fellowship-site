@@ -1,114 +1,72 @@
 .faq {
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 1px 0;
   margin-top: 100px;
+  margin-bottom: 1px;
   overflow: hidden;
-  font-size: .98em;
+  font-size: 0.98em;
 
   @media screen and (max-width: 1800px) {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   @media screen and (max-width: 767px) {
     margin-top: 0;
   }
 
-  .blob {
-    position: absolute;
-    height: 100%;
-    width: 70%;
-    max-width: 1260px;
-
-    @media screen and (max-width: 1200px) {
-      width: 100%;
-      left: -25px;
-    }
-
-    @media screen and (max-width: 767px) {
-      width: auto;
-      height: calc(100% - 70px);
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    @media screen and (max-width: 600px) {
-      transform: translateX(-40%);
-    }
-
-    @media screen and (max-width: 500px) {
-      transform: translateX(-35%);
-    }
-  }
-
-  .cup {
+  .wave {
+    position: relative;
     z-index: 1;
-    
-    position: absolute;
-    right: 7%;
-    bottom: 20%;
 
-    --width: 30vw;
-    width: var(--width);
-    max-width: 540px;
-    height: calc(1.3 * var(--width));
-    max-height: calc(1.3 * 540px);
-
-    @media screen and (max-width: 1200px) {
-      --width: 23%;
-      bottom: 30%;
-    }
-
-    @media screen and (max-width: 767px) {
-      top: 0;
-      right: auto;
-      left: 50%;
-      transform: translateX(-75%);
-      --width: 120px;
-    }
+    margin-top: 0%;
+    margin-left: 65%;
+    margin-right: 0%;
+    margin-bottom: 1px;
   }
 
   .content {
-    position: relative;
-    z-index: 1;
-    line-height: 1.5em;
-
-    margin: 120px 0 100px min(10%, 180px);
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 45%;
+    top: 15%;
+    max-width: 1000px;
     padding-bottom: 1px;
-    width: 50%;
-    max-width: 900px;
 
     @media screen and (max-width: 1200px) {
-      margin-bottom: 110px;
+      margin-bottom: 1px;
       width: 60%;
-      font-size: .95em;
+      font-size: 0.95em;
     }
 
     @media screen and (max-width: 767px) {
-      font-size: .9em;
+      font-size: 0.9em;
       width: auto;
 
       margin-right: 10%;
-      margin-bottom: 75px;
+      margin-bottom: 1px;
       margin-top: 190px;
     }
 
     h1 {
-      font-size: 2.15em;
+      color: #ffffff;
+      font-size: 2.2em;
       font-weight: 600;
-      margin-bottom: 35px;
+      margin-bottom: 1px;
 
       @media screen and (max-width: 767px) {
-        font-size: 1.6em;
-        text-align: center;
-        margin-bottom: 30px;
+        font-size: 2.15em;
+        text-align: left;
+        margin-left: 5%;
+        margin-bottom: 1px;
       }
     }
 
     h4 {
       font-size: 1.15em;
       font-weight: 600;
-      color: #3C519C;
+      color: #f37964;
       margin-bottom: 0;
 
       @media screen and (max-width: 767px) {
@@ -117,8 +75,14 @@
     }
 
     p {
+      font-size: 1.1em;
+      line-height: 1.5em;
       margin-top: 3px;
-      color: #303030;
+      color: #ffffff;
+
+      &.bold {
+        font-weight: 500;
+      }
     }
   }
 }

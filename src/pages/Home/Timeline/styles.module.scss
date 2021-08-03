@@ -5,14 +5,16 @@
 
   .title {
     font-weight: 600;
-    font-size: 2.1em;
+    font-size: 2.2em;
     margin-bottom: 50px;
+    text-align: center;
     &.mobile {
       display: none;
-      text-align: center;
     }
 
     @media screen and (max-width: 767px) {
+      text-align: left;
+      margin-left: 5%;
       display: none;
       &.mobile {
         display: block;
@@ -26,103 +28,26 @@
     width: 75%;
     margin: auto;
     max-width: 1200px;
-    
+
     @media screen and (max-width: 1200px) {
       width: 85%;
     }
-    
+
     @media screen and (max-width: 767px) {
       width: 90%;
       justify-content: space-between;
     }
-    
-    .decorations {
-      width: 20%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      margin-top: 50px;
-      --scale: .75;
 
-      @media screen and (max-width: 767px) {
-        --scale: .5;
-        margin-top: 0;
-        margin-bottom: 50px;
-        width: 15%;
-      }
-
-      @media (max-width: 550px) {
-        width: 20%;
-      }
-      
-      @media (max-width: 450px) {
-        width: 25%;
-      }
-
-      @media (max-width: 400px) {
-        --scale: .45;
-      }
-
-      img {
-        position: relative;
-        margin: 10px auto;
-        z-index: 1;
-      }
-      
-      .fireStick {
-        width: calc(var(--scale) * 140px);
-        right: 35px;
-        @media screen and (max-width: 767px) {
-          right: 0;
-        }
-      }
-      
-      .rocks {
-        width: calc(var(--scale) * 120px);
-      }
-      
-      .sticks {
-        width: calc(var(--scale) * 125px);
-        right: 20px;
-        @media screen and (max-width: 767px) {
-          right: 0;
-        }
-      }
-      
-      .campfire {
-        width: calc(var(--scale) * 150px);
-      }
-      
-      .smoke {
-        position: absolute;
-        height: 68%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-60%, -55%);
-        z-index: 0;
-
-        @media screen and (max-width: 900px) {
-          width: 110%;
-          height: 74%;
-        }
-
-        @media (max-width: 767px) {
-          display: none;
-        }
-      }
-    }
-    
     .content {
       width: 70%;
       display: flex;
       flex-direction: column;
       white-space: pre-line;
       line-height: 1.5em;
-      
+
       @media (max-width: 767px) {
         width: 80%;
-        font-size: .9em;
+        font-size: 0.9em;
       }
 
       @media (max-width: 550px) {

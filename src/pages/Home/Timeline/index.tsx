@@ -1,12 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-
-import FIRE_STICK from 'assets/home/timeline/fire_stick.svg';
-import ROCKS from 'assets/home/timeline/rocks.svg';
-import STICKS from 'assets/home/timeline/sticks.svg';
-import CAMPFIRE from 'assets/home/timeline/campfire.svg';
-import SMOKE from 'assets/home/timeline/smoke.svg';
-
 import styles from './styles.module.scss';
 
 const Timeline = (): JSX.Element => (
@@ -14,13 +7,6 @@ const Timeline = (): JSX.Element => (
     <h2 className={clsx(styles.title, styles.mobile)}>TIMELINE</h2>
 
     <div className={styles.container}>
-      <div className={styles.decorations}>
-        <img className={styles.fireStick} src={FIRE_STICK} alt="" />
-        <img className={styles.rocks} src={ROCKS} alt="" />
-        <img className={styles.sticks} src={STICKS} alt="" />
-        <img className={styles.campfire} src={CAMPFIRE} alt="" />
-        <img className={styles.smoke} src={SMOKE} alt="" />
-      </div>
 
       <div className={styles.content}>
         <h2 className={styles.title}>TIMELINE</h2>

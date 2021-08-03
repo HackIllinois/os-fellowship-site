@@ -8,6 +8,7 @@
     "react/require-default-props": "off",
     "linebreak-style": "off",
     "max-len": "off",
-    "react/no-danger": "off"
+    "react/no-danger": "off",
+    "arrow-body-style": "off"
   }
 }

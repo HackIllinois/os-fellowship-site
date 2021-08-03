@@ -1,77 +1,30 @@
 .home {
-  background-color: #1E2E55;
+  background-color: #11112f;
   position: relative;
 
   .landscapeExtension {
     position: relative;
     margin-top: -5px;
-    background-color: #151C44;
+    background-color: #151c44;
   }
-  
+
   .gradient {
-    background: linear-gradient(359.81deg, #040926 12.4%, rgba(21, 28, 68, 0) 95.75%);
-    padding-top: 300px;
-    padding-bottom: 300px;
+    background: linear-gradient(to bottom, #11112f 20%, #f37964);
+    padding-top: 1px;
+    padding-bottom: 1px;
     position: relative;
     overflow: hidden;
-    margin-top: 100px; // TODO: remove when mentors info section is added
+    margin-top: 1px; // TODO: remove when mentors info section is added
 
     @media screen and (max-width: 1200px) {
-      margin-top: 150px;
-      padding-top: 50px;
+      margin-top: 1px;
+      padding-top: 1px;
     }
-    
+
     @media screen and (max-width: 767px) {
-      padding-top: 100px;
+      padding-top: 1px;
       margin-top: 0;
-      margin-top: 100px; // TODO: remove when mentors info section is added
-    }
-
-    .backgroundBlobs {
-      position: absolute;
-      height: 101%;
-      width: 100%;
-      top: 0;
-
-      &.tablet {
-        display: none;
-      }
-
-      @media screen and (max-width: 1200px) {
-        display: none;
-        &.tablet {
-          display: block;
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        &.tablet {
-          display: none;
-        }
-      }
-    }
-
-    .lantern {
-      position: absolute;
-      right: 150px;
-      top: 130px;
-      width: 18.75%;
-      min-width: 250px;
-
-      @media screen and (max-width: 1200px) {
-        min-width: 0;
-        width: 175px;
-        top: 0;
-        right: calc(18% - 110px);
-      }
-
-      @media screen and (max-width: 767px) {
-        top: 0;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 140px;
-      }
+      margin-top: 1px; // TODO: remove when mentors info section is added
     }
   }
 }

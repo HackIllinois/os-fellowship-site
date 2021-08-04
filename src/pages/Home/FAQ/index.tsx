@@ -27,7 +27,7 @@ const FAQ = (): JSX.Element => {
 
         <h4>When is the Open Source Fellowship?</h4>
         <p>
-          Open Source Fellowship will kick off on February 12th, 2021, and conclude on March 4th, 2021.
+          Open Source Fellowship will kick off on September 30th, 2021 and conclude on October 21st, 2021.
         </p>
 
         <h4>Who can participate in the Open Source Fellowship?</h4>

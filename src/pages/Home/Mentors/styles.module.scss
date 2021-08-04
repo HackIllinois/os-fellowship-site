@@ -92,7 +92,7 @@
     .name {
       margin: 0;
       font-size: 1.65em;
-      font-weight: 400;
+      font-weight: 600;
       @media screen and (max-width: 1200px) {
         font-size: 1.1em;
         font-weight: 600;
@@ -115,12 +115,8 @@
 
     .bio {
       line-height: 1.5em;
-      font-weight: 300;
       white-space: pre-line;
       font-size: 0.95em;
-      @media screen and (max-width: 767px) {
-        font-weight: 400;
-      }
 
       a {
         color: #add8cd;

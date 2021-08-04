@@ -1,20 +1,17 @@
+html {
+  background: linear-gradient(to bottom, #f37964 20%, #11112f);
+}
+
 .home {
   background-color: #11112f;
   position: relative;
 
-  .landscapeExtension {
-    position: relative;
-    margin-top: -5px;
-    background-color: #151c44;
-  }
-
   .gradient {
     background: linear-gradient(to bottom, #11112f 20%, #f37964);
     padding-top: 1px;
-    padding-bottom: 1px;
     position: relative;
     overflow: hidden;
-    margin-top: 1px; // TODO: remove when mentors info section is added
+    margin-top: 1px;
 
     @media screen and (max-width: 1200px) {
       margin-top: 1px;
@@ -24,7 +21,11 @@
     @media screen and (max-width: 767px) {
       padding-top: 1px;
       margin-top: 0;
-      margin-top: 1px; // TODO: remove when mentors info section is added
+      margin-top: 1px;
     }
+  }
+
+  .wave {
+    margin-bottom: -100px;
   }
 }

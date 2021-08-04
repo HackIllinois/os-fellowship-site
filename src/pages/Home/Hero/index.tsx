@@ -6,7 +6,7 @@ import LOGO_MOBILE from 'assets/home/hero/logo_mobile.svg';
 
 import styles from './styles.module.scss';
 
-const Section1: React.FC = () => (
+const Hero: React.FC = () => (
   <div className={styles.hero}>
     <img className={styles.logo} src={LOGO} alt="" />
     <img className={styles.logoMobile} src={LOGO_MOBILE} alt="" />
@@ -16,10 +16,10 @@ const Section1: React.FC = () => (
       <h4>HackIllinois presents</h4>
       <h1>Open Source</h1>
       <h1>Fellowship</h1>
-      <h3>February 12 - March 4, 2021</h3>
+      <h3>September 30 - October 21, 2021</h3>
       <a className={styles.applyButton} href="https://docs.google.com/forms/d/e/1FAIpQLSeCUg51ZyealgmuZygU7atgu8FduzI3WvNeKfiAxuiUHml6wQ/viewform?usp=sf_link">Apply Now</a>
     </div>
   </div>
 );
 
-export default Section1;
+export default Hero;

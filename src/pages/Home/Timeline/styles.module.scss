@@ -1,7 +1,7 @@
 .timeline {
   position: relative;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 0px;
   padding-top: 1px;
 
   display: flex;
@@ -13,7 +13,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    right: 0;
+    right: 0%;
     width: 85%;
   }
 

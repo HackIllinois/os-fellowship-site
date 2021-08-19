@@ -15,7 +15,7 @@
 .mentors {
   position: relative;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 0px;
   right: 3%;
   padding-top: 1px;
 
@@ -31,7 +31,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    right: 0;
+    right: 0%;
     width: 85%;
   }
 

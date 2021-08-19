@@ -8,17 +8,10 @@
 
   .wave {
     position: absolute;
-    margin-left: 0%;
+    margin-top: 10%;
     margin-right: 0%;
-    top: 5%;
-
-    @media screen and (max-width: 1200px) {
-      margin-right: 8%;
-    }
-
-    @media screen and (max-width: 767px) {
-      margin-right: 10%;
-    }
+    margin-bottom: 1px;
+    max-height: 900px;
   }
 
   .content {

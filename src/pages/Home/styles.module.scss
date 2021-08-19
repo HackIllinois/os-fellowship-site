@@ -1,7 +1,3 @@
-html {
-  background: linear-gradient(to bottom, #f37964 20%, #11112f);
-}
-
 .home {
   background-color: #11112f;
   position: relative;
@@ -26,6 +22,10 @@ html {
   }
 
   .wave {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     margin-bottom: -100px;
   }
 }

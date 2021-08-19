@@ -19,18 +19,28 @@
 
     padding-bottom: 1px;
     margin-left: 45%;
-    margin-right: 5%;
+    margin-right: 10%;
     margin-top: 10px;
     max-width: 1000px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1800px) {
       width: 1100px;
+      font-size: 1.05em;
     }
-  
+    
     @media screen and (max-width: 1200px) {
-      margin: auto;
-      right: 0;
+      left: 1%;
       width: 85%;
+      font-size: .95em;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: auto;
+      margin-right: 10%;
+    }
+    
+    @media screen and (max-width: 550px) {
+      font-size: .85em;
     }
 
     .welcome {

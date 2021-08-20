@@ -17,7 +17,7 @@ const Hero: React.FC = () => (
       <h1>Open Source</h1>
       <h1>Fellowship</h1>
       <h3>September 30 - October 21, 2021</h3>
-      <a className={styles.applyButton} href="https://docs.google.com/forms/d/e/1FAIpQLSeCUg51ZyealgmuZygU7atgu8FduzI3WvNeKfiAxuiUHml6wQ/viewform?usp=sf_link">Apply Now</a>
+      <a className={styles.applyButton} href="https://go.hackillinois.org/fellowship-application">Apply Now</a>
     </div>
   </div>
 );

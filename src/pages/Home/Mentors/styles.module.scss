@@ -1,9 +1,9 @@
 .screenReaderOnly {
-  border: 0; 
-  clip: rect(0 0 0 0); 
+  border: 0;
+  clip: rect(0 0 0 0);
   clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-  height: 1px; 
+  height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
@@ -15,12 +15,12 @@
 .mentors {
   position: relative;
   margin: auto;
-  margin-top: 50px;
   right: 3%;
-  
+  padding-top: 1px;
+
   display: flex;
   flex-direction: column;
-  
+
   width: 70%;
   max-width: 1600px;
   color: white;
@@ -30,7 +30,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    right: 0;
+    right: 0%;
     width: 85%;
   }
 
@@ -39,12 +39,10 @@
     font-weight: 600;
     margin-bottom: 50px;
     text-transform: uppercase;
-
-    @media screen and (max-width: 1200px) {
-      text-align: center;
-    }
+    text-align: center;
 
     @media screen and (max-width: 767px) {
+      text-align: left;
       font-size: 1.6em;
       margin-bottom: 40px;
     }
@@ -56,7 +54,7 @@
     width: 100%;
     margin: 25px auto;
     align-items: center;
-    
+
     @media screen and (max-width: 1200px) {
       --image-size: 200px;
     }
@@ -64,11 +62,11 @@
     @media screen and (max-width: 767px) {
       --image-size: 150px;
       display: block;
-      font-size: .95em;
+      font-size: 0.95em;
     }
 
     @media screen and (max-width: 550px) {
-      font-size: .85em;
+      font-size: 0.85em;
     }
 
     @media screen and (min-width: 1800px) {
@@ -92,7 +90,7 @@
     .name {
       margin: 0;
       font-size: 1.65em;
-      font-weight: 400;
+      font-weight: 600;
       @media screen and (max-width: 1200px) {
         font-size: 1.1em;
         font-weight: 600;
@@ -103,7 +101,7 @@
       margin: 0;
       font-weight: 600;
       font-size: 1.1em;
-      color: #ADD8CD;
+      color: #f37964;
       margin-top: 5px;
       display: block;
       text-decoration: none;
@@ -115,15 +113,11 @@
 
     .bio {
       line-height: 1.5em;
-      font-weight: 300;
       white-space: pre-line;
-      font-size: .95em;
-      @media screen and (max-width: 767px) {
-        font-weight: 400;
-      }
+      font-size: 0.95em;
 
       a {
-        color: #ADD8CD;
+        color: #add8cd;
         text-decoration: none;
         &:hover {
           text-decoration: underline;

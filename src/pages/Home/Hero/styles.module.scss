@@ -1,6 +1,6 @@
 @mixin large-screen {
   @media screen and (min-width: 1800px), screen and (min-width: 1500px) and (min-height: 1100px) {
-    @content
+    @content;
   }
 }
 
@@ -23,6 +23,13 @@
 
   img {
     -webkit-user-drag: none;
+  }
+
+  .wave {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
   .logo {
@@ -50,140 +57,6 @@
     }
   }
 
-  .wave1 {
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    height: 75%;
-  }
-
-  .wave2 {
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    height: 60%;
-  }
-
-  .topStars {
-    height: 35%;
-
-    background-size: auto 150%;
-    background-position: right;
-  }
-
-  .centerStars {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-58%);
-    
-    height: 91%;
-
-    @media screen and (max-width: 1200px) {
-      transform: translateX(-64%);
-    }
-
-    @media screen and (max-width: 1023px) {
-      transform: translateX(-70%);
-    }
-
-    @media screen and (max-width: 767px) {
-      transform: translateX(-35%);
-      height: 100%;
-      bottom: -1%;
-    }
-  }
-
-  .moon {
-    position: absolute;
-    right: 6vw;
-    top: 6%;
-
-    height: 30%;
-
-    @media screen and (max-width: 767px) {
-      height: 125px;
-      top: 3%;
-      right: 4%;
-    }
-  }
-
-  .leftTrees {
-    position: absolute;
-    left: 0;
-    bottom: 5%;
-
-    height: 88%;
-
-    @media screen and (max-width: 1000px) {
-      left: -60px;
-    }
-
-    @media screen and (max-width: 900px) {
-      left: -100px;
-    }
-
-    @media screen and (max-width: 767px) {
-      height: 78%;
-      left: -60px;
-      bottom: 2%;
-    }
-  }
-
-  .rightTrees {
-    position: absolute;
-    right: 0;
-    bottom: 12%;
-
-    height: 55%;
-
-    @media screen and (max-width: 1200px) {
-      right: -40px;
-    }
-
-    @media screen and (max-width: 900px) {
-      right: -60px;
-    }
-
-    @media screen and (max-width: 767px) {
-      height: 42%;
-      right: -25px;
-      bottom: 5%;
-    }
-
-    @include large-screen {
-      display: none;
-    }
-
-    &.full {
-      display: none;
-      right: -150px;
-
-      @include large-screen {
-        display: initial;
-      }
-    }
-  }
-
-  .bottomLandscape {
-    position: absolute;
-    bottom: -1.25vw;
-    left: 0;
-
-    width: 100%;
-    height: 19%;
-
-    @media screen and (max-width: 1200px) {
-      height: 18%;
-    }
-
-    @media screen and (max-width: 767px) {
-      height: 11%;
-    }
-  }
-
   .header {
     user-select: text;
     color: white;
@@ -194,7 +67,7 @@
 
     @media screen and (max-width: 1200px) {
       top: 25%;
-      font-size: .9em
+      font-size: 0.9em;
     }
 
     @media screen and (max-width: 1000px) {
@@ -211,8 +84,8 @@
 
     @media screen and (max-width: 767px) {
       text-align: center;
-      font-size: .75em;
-      
+      font-size: 0.75em;
+
       width: 100%;
       left: 0;
       top: 28%;
@@ -247,7 +120,7 @@
     .applyButton {
       display: inline-block;
       text-decoration: none;
-      background-color: #EE6C72;
+      background-color: #ee6c72;
       color: white;
 
       text-transform: uppercase;
@@ -256,46 +129,6 @@
 
       padding: 7px 14px;
       border-radius: 100px;
-    }
-  }
-
-  .description {
-    user-select: text;
-    color: white;
-
-    position: absolute;
-    right: 16%;
-    bottom: 11%;
-
-    font-weight: 300;
-    text-align: center;
-    line-height: 25px;
-    font-size: .85em;
-
-    width: 375px;
-
-    @media screen and (max-width: 1200px) {
-      bottom: 8%;
-      font-size: .8em;
-    }
-
-    @media screen and (min-height: 900px) and (max-width: 1000px) {
-      bottom: 9%;
-    }
-
-    @media screen and (min-height: 900px) and (min-width: 1000px) {
-      right: 21%;
-      bottom: 10%;
-    }
-    
-    @include large-screen {
-      right: 25%;
-      font-size: .95em;
-      width: 450px;
-    }
-
-    @media screen and (max-width: 767px) {
-      display: none;
     }
   }
 }

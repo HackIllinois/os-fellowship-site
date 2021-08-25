@@ -1,6 +1,7 @@
 .eventInfo {
   position: relative;
   padding-top: 1px;
+  min-height: calc(960px + 10vw);
 
   display: flex;
   flex-direction: column;

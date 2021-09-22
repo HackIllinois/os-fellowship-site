@@ -1,51 +1,27 @@
 [
   {
-    "name": "Kelly Shen",
-    "headshot": "kelly_shen.jpg",
-    "github": "kelly-shen",
+    "name": "Rajas Kakodkar",
+    "headshot": "rajas_kakodkar.jpeg",
+    "github": "rajaskakodkar",
     "projects": [
       {
-        "name": "Julia",
-        "link": "https://github.com/JuliaLang"
+        "name": "Kubernetes",
+        "link": "https://github.com/kubernetes/kubernetes"
       }
     ],
-    "bio": "Kelly is a data engineer at fintech startup Button where she works on data infrastructure and platform. She has been involved in the Julia community since her undergraduate days at MIT where she learned the language in a linear algebra class and used it in a few research projects. Kelly loves to interact with students, and always finds herself impressed and amazed by their creativity and curiosity. She's very excited to return to HackIllinois as a mentor for JuliaLang!"
+    "bio": "I am a Member of Technical Staff at VMware working on Tanzu Kubernetes Grid and based out of Goa, India. I am an active contributor to Kubernetes most recently helping with maintaining networkpolicy tests. I also hold interest in Deep Learning particularly in fastai. When I am not coding, I am a car enthusiast, a foodie and a guitarist."
   },
   {
-    "name": "Jason R. Coombs",
-    "headshot": "jason_coombs.jpg",
-    "github": "jaraco",
+    "name": "Nabarun Pal",
+    "headshot": "nabarun_pal.jpg",
+    "github": "palnabarun",
     "projects": [
       {
-        "name": "Setuptools",
-        "link": "https://github.com/pypa/setuptools"
+        "name": "Kubernetes",
+        "link": "https://github.com/kubernetes/kubernetes"
       }
     ],
-    "bio": ""
-  },
-  {
-    "name": "Matthew Turk",
-    "headshot": "matthew_turk.jpg",
-    "github": "matthewturk",
-    "projects": [
-      {
-        "name": "The yt Project",
-        "link": "https://github.com/yt-project/yt"
-      }
-    ],
-    "bio": "Matt is an Assistant Professor at the School of Information Sciences at UIUC, where he works on data visualization, studying open source software dynamics, and the analysis of datasets in the natural sciences"
-  },
-  {
-    "name": "Jeff Bezanson",
-    "headshot": "jeff_bezanson.jpeg",
-    "github": "JeffBezanson",
-    "projects": [
-      {
-        "name": "Julia",
-        "link": "https://github.com/JuliaLang/julia"
-      }
-    ],
-    "bio": "Jeff is a co-creator of the Julia Language and co-founder of Julia Computing, Inc. His main interests include compilers, language run-time systems, parallel and numerical computing, and applications in data science, machine learning, and applied science. He received a PhD in computer science from MIT in 2015."
+    "bio": "A contributor to several areas of the Kubernetes project, Nabarun has led the Kubernetes 1.21 Release Team and is a member of the Kubernetes Code of Conduct Committee. Nabarun is a GSoC Admin for the Cloud Native Computing Foundation. He works at VMware as a Open Source Engineer as his day job."
   },
   {
     "name": "Michael Kruse",
@@ -54,25 +30,25 @@
     "projects": [
       {
         "name": "LLVM",
-        "link": "https://github.com/llvm"
+        "link": "https://github.com/llvm/"
       }
     ],
     "bio": "Michael graduated with a Master’s degree in computer science from the University of Paderborn (Germany) and a PhD from the University Paris-Sud 11. After a Post-Doc at the École Normale Supérieur, he currently works at Argonne National Laboratory.\n\nHis topics of research are optimizing compilers for high performance computing, such as Lattice QCD, especially loop optimizations. He contributes to the LLVM compiler infrastructure including Polly, LLVM’s polyhedral optimizer. Currently, he works on a compiler intermediate representation for loop optimizations, standardizing loop transformations in OpenMP and implementing them in Clang and Flang."
   },
   {
-    "name": "Lewis John McGibbney",
-    "headshot": "lewis_mcgibbney.png",
-    "github": "lewismc",
+    "name": "Ian Vincent Norris",
+    "headshot": "default.png",
+    "github": "FeminismIsAwesome",
     "projects": [
       {
-        "name": "Apache Tika",
-        "link": "https://github.com/apache/tika"
+        "name": "Terrastories",
+        "link": "https://github.com/Terrastories/terrastories"
       }
     ],
-    "bio": "Currently employed as a Enterprise Search Technologist at NASA's Jet Propulsion Laboratory. I am a passionate open source enthusiast. I am a member of the Apache Software Foundation where I write most of my code."
+    "bio": "Ian is a software developer in SF who loves pair programming, cats, and using technology to help improve people's lives. Experienced in software consulting, Rails, pair programming, and agile practices."
   },
   {
-    "name": "Pablo S Blum de Aguiar",
+    "name": "Pablo Aguiar",
     "headshot": "pablo_aguiar.png",
     "github": "scorphus",
     "projects": [
@@ -85,95 +61,54 @@
         "link": "https://github.com/oh-my-fish/oh-my-fish"
       }
     ],
-    "bio": "Pablo is a Computer Scientist from Brazil, working as Lead Software Engineer in Germany. He's passionate about computer programming, cycling and coffee. He's been actively contributing to open source for at least 15 years. He mostly writes Python and Go. More recently, he's found himself in love with Elixir and Rust.\n\nCheck out our <a target=\"_blank\" href=\"https://blog.hackillinois.org/spotlights/2018/08/14/mentor-spotlight-pablo-aguiar.html\">mentor spotlight</a>!"
+    "bio": "Pablo is a computer scientist working as a lead software engineer at MindYourRights GmbH, where he's co-authoring a disruptive, common platform for global music rights management. He's passionate about computer programming, cycling, and coffee. He's been an active open source contributor for at least 15 years, writing mostly in Python, Go, and JavaScript. For the last few years, he found himself in love with Elixir and Rust. He's very excited to return to the HackIllinois OS Fellowship as a mentor for the 2nd consecutive season!"
   },
   {
-    "name": "Aidan Feldman",
-    "headshot": "aidan_feldman.jpg",
-    "github": "afeld",
+    "name": "Kyle Holmberg",
+    "headshot": "kyle_holmberg.jpg",
+    "github": "kylemh",
     "projects": [
       {
-        "name": "pandas",
-        "link": "https://github.com/pandas-dev/pandas"
+        "name": "Operation Code",
+        "link": "https://github.com/OperationCode/front-end"
       }
     ],
-    "bio": "Aidan Feldman is a civic technologist by day, dancer by night. He has worked as a Technology Director, Data Engineer, Innovation Specialist, and DevOps Consultant for various government agencies, including 18F and New York City Planning Labs. Before that, he was on the education team at GitHub and other technology and publishing companies. Aidan got into the pandas project through teaching classes on Python for public policy students at NYU.\n\nWhen not hacking bureaucracy, Aidan likes biking and baking, and has another life as a professional modern dancer. Also, he's from Illinois!"
+    "bio": "I consider myself a front-end engineer particularly interested in component libraries, design systems, continuous integration, soccer, travel, and video games. I currently work at Capsule, and have worked at Air, Acorns, Nike, AutoGravity, and the University of Oregon over the past 5 years. I've contributed to many open source projects including Next.js and Storybook, and I am the acting CTO at a non-profit organization called Operation Code. I just started the digital nomad life. I'm currently in NYC, but will be living in Thailand, Colombia, Spain, and other European countries throughout 2022."
   },
   {
-    "name": "Raymond Zhao",
-    "headshot": "vscode.png",
-    "headshotStyles": {
-      "backgroundSize": "80%",
-      "backgroundPosition": "center center"
-    },
-    "github": "rzhao271",
+    "name": "Shivani Singhal",
+    "headshot": "shivani_singhal.jpeg",
+    "github": "shivi28",
     "projects": [
       {
-        "name": "Visual Studio Code",
-        "link": "https://github.com/microsoft/vscode"
-      }
-    ],
-    "bio": "Software Developer @ MSFT, working on the VS Code Emmet extension | Minimalist"
-  },
-  {
-    "name": "Rachel Macfarlane",
-    "headshot": "vscode.png",
-    "headshotStyles": {
-      "backgroundSize": "80%",
-      "backgroundPosition": "center center"
-    },
-    "github": "RMacfarlane",
-    "projects": [
-      {
-        "name": "Visual Studio Code",
-        "link": "https://github.com/microsoft/vscode"
-      }
-    ],
-    "bio": "Hi! I've been working at Microsoft since I graduated college 5 years ago. For the last 3 years, I've been very lucky to work on VSCode - some areas I own are issue reporting and authentication, and I spend a lot of time thinking about pull requests. In my free time, I like growing plants (my apartment has over 80 houseplants), hiking, biking, and cooking."
-  },
-  {
-    "name": "Tyler Leonhardt",
-    "headshot": "tyler leonhardt.jpeg",
-    "github": "TylerLeonhardt",
-    "projects": [
-      {
-        "name": "Visual Studio Code",
-        "link": "https://github.com/Microsoft/vscode"
-      }
-    ],
-    "bio": "I work on the VS Code team at Microsoft.\n\nAll my work is open source.\n\nSometimes people give me a mic and I talk about 💻. You can also find me on Twitch live-coding projects of all kinds.\n\nI also like ☕️ with the word \"mouthfeel\" on the packaging."
-  },
-  {
-    "name": "PrairieLearn Team",
-    "headshot": "prairielearn.png",
-    "headshotStyles": {
-      "backgroundSize": "75%",
-      "backgroundPosition": "center center",
-      "backgroundColor": "white"
-    },
-    "github": "PrairieLearn/PrairieLearn",
-    "projects": [
-      {
-        "name": "PrairieLearn",
-        "link": "https://github.com/PrairieLearn/PrairieLearn"
-      }
-    ],
-    "bio": "PrairieLearn is an open-source online assessment system that provides both the easiness to create simple question types and the flexibility to create novel and/or unique questions to fit the instructor's educational needs. For the HackIllinois, the PrairieLearn team will be mentoring two groups that would like to participate in the following projects: 1) develop a PrairieLearn element that uses the library https://www.diagrams.net to create questions such as finite state machines; and 2) incorporate new features for collaborative learning and group projects, such as real-time synchronization, group roles, visualization tools, etc. The PrairieLearn team mentoring these activities will consist of a diverse of group of professors, graduate and former students, including Matt West, Mariana Silva, Nathan Walters, Geoffrey Herman, Abdu Alawini, Dave Mussulman, Nicolas Nytko, and others. "
-  },
-  {
-    "name": "Eric Amodio",
-    "headshot": "vscode.png",
-    "headshotStyles": {
-      "backgroundSize": "80%",
-      "backgroundPosition": "center center"
-    },
-    "github": "eamodio",
-    "projects": [
-      {
-        "name": "Visual Studio Code",
-        "link": "https://github.com/microsoft/vscode"
+        "name": "Cluster API provider for AWS",
+        "link": "https://github.com/kubernetes-sigs/cluster-api-provider-aws"
       }
     ],
     "bio": ""
+  },
+  {
+    "name": "Evan Hazlett",
+    "headshot": "default.png",
+    "github": "ehazlett",
+    "projects": [
+      {
+        "name": "Kentik Labs",
+        "link": "https://github.com/kentik"
+      }
+    ],
+    "bio": "Evan has a long history in open source including being a maintainer on the Docker Engine and contributions to swarm, containerd, and various personal open source projects.  He is always happy to help bring new people into the world of open source :)"
+  },
+  {
+    "name": "Nikhil Bartwal",
+    "headshot": "nikhil_bartwal.jpeg",
+    "github": "NikhilBartwal",
+    "projects": [
+      {
+        "name": "Tensorflow Datasets",
+        "link": "https://github.com/tensorflow/datasets"
+      }
+    ],
+    "bio": "Hey! I'm Nikhil, a final year undergraduate student from India. I love Machine Learning, Data Science and Open-Source (like a lot!).\n\nI've been a contributor at Tensorflow for the past 1 year and am currently working as an ML Engineer at AfterShoot. Open source is something that I'm really passionate about and feel that it gives students like us a chance to get real world experience from the comfort of our home and time.\n\nWould love to meet the amazing students this Fall!"
   }
 ]

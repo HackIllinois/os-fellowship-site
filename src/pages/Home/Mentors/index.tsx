@@ -10,12 +10,12 @@ const Mentors = (): JSX.Element => (
   <div className={styles.mentors}>
     <h3 className={styles.title}>Mentors</h3>
 
-    {mentors.map(({ name, projects, headshot, bio, github, headshotStyles = {} }) => (
+    {mentors.map(({ name, projects, headshot, bio, github = {} }) => (
       <div className={styles.mentor}>
         <a
           className={styles.headshot}
           href={`https://github.com/${github}`}
-          style={{ backgroundImage: `url("/mentor_photos/${headshot}")`, ...headshotStyles }}
+          style={{ backgroundImage: `url("/mentor_photos/${headshot}")` }}
           target="_blank"
           rel="noopener noreferrer"
         >

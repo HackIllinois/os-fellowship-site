@@ -98,17 +98,5 @@
       }
     ],
     "bio": "Evan has a long history in open source including being a maintainer on the Docker Engine and contributions to swarm, containerd, and various personal open source projects.  He is always happy to help bring new people into the world of open source :)"
-  },
-  {
-    "name": "Nikhil Bartwal",
-    "headshot": "nikhil_bartwal.jpeg",
-    "github": "NikhilBartwal",
-    "projects": [
-      {
-        "name": "Tensorflow Datasets",
-        "link": "https://github.com/tensorflow/datasets"
-      }
-    ],
-    "bio": "Hey! I'm Nikhil, a final year undergraduate student from India. I love Machine Learning, Data Science and Open-Source (like a lot!).\n\nI've been a contributor at Tensorflow for the past 1 year and am currently working as an ML Engineer at AfterShoot. Open source is something that I'm really passionate about and feel that it gives students like us a chance to get real world experience from the comfort of our home and time.\n\nWould love to meet the amazing students this Fall!"
   }
 ]
